@@ -7,7 +7,8 @@ Outputs (PNG, 200 dpi, white background):
 
     figures/eval_per_category.png   per-category results, read from <results>/summary.json
     figures/architecture.png        architecture diagram (2400 x 1500 px)
-    figures/teaser_1600x1000.png    the same diagram as a web teaser, exactly 1600 x 1000 px
+    figures/teaser_1600x1000.png    the diagram reduced to its box titles in large type, for
+                                    small web thumbnails; exactly 1600 x 1000 px
 
 Needs matplotlib (``pip install -e ".[eval]"``).
 """
@@ -284,7 +285,7 @@ def figure_evaluation(results_dir: Path, out: Path) -> None:
 # -- figure 2: architecture ------------------------------------------------------------
 
 
-def _box(ax, x, y, w, h, kind, title, lines, scale) -> None:
+def _box(ax, x, y, w, h, kind, title, lines, scale, title_size=11.5) -> None:
     fill, edge = PANEL[kind]
     ax.add_patch(
         FancyBboxPatch(
@@ -297,6 +298,19 @@ def _box(ax, x, y, w, h, kind, title, lines, scale) -> None:
             linewidth=1.3 * scale,
         )
     )
+    if not lines:  # title only, centred in the box
+        ax.text(
+            x + w / 2,
+            y + h / 2,
+            title,
+            ha="center",
+            va="center",
+            fontsize=title_size * scale,
+            fontweight="bold",
+            color=INK,
+            linespacing=1.15,
+        )
+        return
     top = y + h - 0.36
     ax.text(
         x + w / 2,
@@ -304,7 +318,7 @@ def _box(ax, x, y, w, h, kind, title, lines, scale) -> None:
         title,
         ha="center",
         va="center",
-        fontsize=11.5 * scale,
+        fontsize=title_size * scale,
         fontweight="bold",
         color=INK,
     )
@@ -348,30 +362,47 @@ def _arrow(ax, start, end, scale, label=None, label_at=None, curve=0.0, colour=I
         )
 
 
-def figure_architecture(out: Path, width_in: float, height_in: float) -> None:
-    """The pipeline on a 16 x 10 canvas; fonts scale with the output width."""
+def figure_architecture(
+    out: Path, width_in: float, height_in: float, compact: bool = False
+) -> None:
+    """The pipeline on a 16 x 10 canvas; fonts scale with the output width.
+
+    ``compact`` keeps only the box titles, set in large type on two lines, and drops the detail
+    lines, the arrow labels and the subtitle, so that the diagram stays readable as a thumbnail.
+    """
     scale = width_in / 12.0
+    title_size = 19.5 if compact else 11.5
+
+    def box(x, y, w, h, kind, title, lines) -> None:
+        if compact:
+            title, lines = title.replace(" ", "\n"), []
+        _box(ax, x, y, w, h, kind, title, lines, scale, title_size)
+
+    def arrow(start, end, label=None, label_at=None, colour=INK_2) -> None:
+        _arrow(ax, start, end, scale, None if compact else label, label_at, colour=colour)
+
     fig = plt.figure(figsize=(width_in, height_in))
     ax = fig.add_axes((0, 0, 1, 1))
     ax.set_xlim(0, 16)
     ax.set_ylim(0, 10)
     ax.axis("off")
 
-    ax.text(0.5, 9.42, "sci-evidence-agent", fontsize=17 * scale, fontweight="bold", va="center")
-    ax.text(
-        0.5,
-        8.86,
-        "question → planner → tools → databases → provenance store → verified answer",
-        fontsize=10.5 * scale,
-        color=INK_2,
-        va="center",
-    )
+    head = 25 if compact else 17
+    ax.text(0.5, 9.42, "sci-evidence-agent", fontsize=head * scale, fontweight="bold", va="center")
+    if not compact:
+        ax.text(
+            0.5,
+            8.86,
+            "question → planner → tools → databases → provenance store → verified answer",
+            fontsize=10.5 * scale,
+            color=INK_2,
+            va="center",
+        )
 
     # Top row: the request path.
     y, h = 5.35, 2.55
-    _box(ax, 0.45, y + 0.55, 1.95, 1.45, "external", "Question", ["free text"], scale)
-    _box(
-        ax,
+    box(0.45, y + 0.55, 1.95, 1.45, "external", "Question", ["free text"])
+    box(
         3.05,
         y,
         2.75,
@@ -379,10 +410,8 @@ def figure_architecture(out: Path, width_in: float, height_in: float) -> None:
         "pipeline",
         "Planner",
         ["language model or", "offline keyword rules;", "providers are", "interchangeable"],
-        scale,
     )
-    _box(
-        ax,
+    box(
         6.55,
         y,
         2.75,
@@ -390,10 +419,8 @@ def figure_architecture(out: Path, width_in: float, height_in: float) -> None:
         "pipeline",
         "Tool executor",
         ["whitelist of 8 tools", "argument validation", "timing, call log", "at most 5 rounds"],
-        scale,
     )
-    _box(
-        ax,
+    box(
         10.05,
         y,
         2.65,
@@ -401,10 +428,8 @@ def figure_architecture(out: Path, width_in: float, height_in: float) -> None:
         "pipeline",
         "Connectors",
         ["uniform result:", "ok · no_match ·", "ambiguous · error", "rate limit, retries"],
-        scale,
     )
-    _box(
-        ax,
+    box(
         13.45,
         y,
         2.15,
@@ -412,21 +437,19 @@ def figure_architecture(out: Path, width_in: float, height_in: float) -> None:
         "external",
         "Databases",
         ["PubChem · ChEMBL", "UniProt · PubMed", "LOTUS / Wikidata", "(public APIs)"],
-        scale,
     )
 
     mid = y + h / 2
-    _arrow(ax, (2.4, mid + 0.02), (3.05, mid + 0.02), scale)
-    _arrow(ax, (5.8, mid + 0.45), (6.55, mid + 0.45), scale, "tool calls", (6.175, mid + 0.78))
-    _arrow(ax, (6.55, mid - 0.45), (5.8, mid - 0.45), scale, "results", (6.175, mid - 0.78))
-    _arrow(ax, (9.3, mid), (10.05, mid), scale)
-    _arrow(ax, (12.7, mid + 0.45), (13.45, mid + 0.45), scale, "HTTPS", (13.075, mid + 0.78))
-    _arrow(ax, (13.45, mid - 0.45), (12.7, mid - 0.45), scale, "JSON", (13.075, mid - 0.78))
+    arrow((2.4, mid + 0.02), (3.05, mid + 0.02))
+    arrow((5.8, mid + 0.45), (6.55, mid + 0.45), "tool calls", (6.175, mid + 0.78))
+    arrow((6.55, mid - 0.45), (5.8, mid - 0.45), "results", (6.175, mid - 0.78))
+    arrow((9.3, mid), (10.05, mid))
+    arrow((12.7, mid + 0.45), (13.45, mid + 0.45), "HTTPS", (13.075, mid + 0.78))
+    arrow((13.45, mid - 0.45), (12.7, mid - 0.45), "JSON", (13.075, mid - 0.78))
 
     # Bottom row: the evidence path.
     y2, h2 = 1.75, 2.05
-    _box(
-        ax,
+    box(
         10.05,
         y2,
         4.1,
@@ -438,10 +461,8 @@ def figure_architecture(out: Path, width_in: float, height_in: float) -> None:
             "cache with original retrieval time",
             "log of every call and question",
         ],
-        scale,
     )
-    _box(
-        ax,
+    box(
         4.85,
         y2,
         4.1,
@@ -453,10 +474,8 @@ def figure_architecture(out: Path, width_in: float, height_in: float) -> None:
             "UniProt accession, PMID, DOI, InChIKey",
             "must occur in the archived raw responses",
         ],
-        scale,
     )
-    _box(
-        ax,
+    box(
         0.45,
         y2 + 0.2,
         3.3,
@@ -464,22 +483,19 @@ def figure_architecture(out: Path, width_in: float, height_in: float) -> None:
         "external",
         "Verified answer",
         ["records with sources;", "untraceable identifiers flagged"],
-        scale,
     )
 
     green = PANEL["evidence"][1]
-    _arrow(ax, (11.4, y), (11.4, y2 + h2), scale, "archive, cache", (11.4, 4.57), colour=green)
-    _arrow(
-        ax,
+    arrow((11.4, y), (11.4, y2 + h2), "archive, cache", (11.4, 4.57), colour=green)
+    arrow(
         (10.05, y2 + h2 / 2),
         (8.95, y2 + h2 / 2),
-        scale,
         "raw",
         (9.5, y2 + h2 / 2 + 0.3),
         colour=green,
     )
-    _arrow(ax, (5.3, y), (5.3, y2 + h2), scale, "answer", (5.3, 4.57), colour=green)
-    _arrow(ax, (4.85, y2 + h2 / 2), (3.75, y2 + h2 / 2), scale, colour=green)
+    arrow((5.3, y), (5.3, y2 + h2), "answer", (5.3, 4.57), colour=green)
+    arrow((4.85, y2 + h2 / 2), (3.75, y2 + h2 / 2), colour=green)
 
     ax.legend(
         handles=[
@@ -503,7 +519,7 @@ def figure_architecture(out: Path, width_in: float, height_in: float) -> None:
         bbox_to_anchor=(0.022, 0.035),
         ncol=3,
         frameon=False,
-        fontsize=9 * scale,
+        fontsize=(13 if compact else 9) * scale,
         handlelength=1.4,
         columnspacing=2.0,
     )
@@ -515,7 +531,7 @@ def main() -> None:
     results_dir = Path(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT_RESULTS
     FIGURES.mkdir(exist_ok=True)
     figure_architecture(FIGURES / "architecture.png", 12.0, 7.5)
-    figure_architecture(FIGURES / "teaser_1600x1000.png", 8.0, 5.0)
+    figure_architecture(FIGURES / "teaser_1600x1000.png", 8.0, 5.0, compact=True)
     print("wrote figures/architecture.png and figures/teaser_1600x1000.png")
     if (results_dir / "summary.json").is_file():
         figure_evaluation(results_dir, FIGURES / "eval_per_category.png")
