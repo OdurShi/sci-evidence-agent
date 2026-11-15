@@ -1,0 +1,24 @@
+{
+ "recorded": "2026-11-14",
+ "request": {
+  "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json",
+  "params": {
+   "molecule_chembl_id": "CHEMBL99999999",
+   "limit": 3
+  }
+ },
+ "status": 200,
+ "headers": {
+  "content-type": "application/json"
+ },
+ "body": {
+  "activities": [],
+  "page_meta": {
+   "limit": 3,
+   "next": null,
+   "offset": 0,
+   "previous": null,
+   "total_count": 0
+  }
+ }
+}

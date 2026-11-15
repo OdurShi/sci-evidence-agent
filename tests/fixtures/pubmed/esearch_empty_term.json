@@ -1,0 +1,29 @@
+{
+ "recorded": "2026-11-14",
+ "request": {
+  "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi",
+  "params": {
+   "tool": "sci-evidence-agent",
+   "db": "pubmed",
+   "retmode": "json",
+   "term": "",
+   "retmax": 3,
+   "sort": "relevance"
+  }
+ },
+ "status": 200,
+ "headers": {
+  "content-type": "application/json; charset=UTF-8",
+  "x-ratelimit-limit": "3",
+  "x-ratelimit-remaining": "2"
+ },
+ "body": {
+  "header": {
+   "type": "esearch",
+   "version": "0.3"
+  },
+  "esearchresult": {
+   "ERROR": "Empty term and query_key - nothing todo"
+  }
+ }
+}

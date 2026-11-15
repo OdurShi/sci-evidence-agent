@@ -1,0 +1,24 @@
+{
+ "recorded": "2026-11-14",
+ "request": {
+  "url": "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json",
+  "params": {
+   "q": "zzzznotacompound",
+   "limit": 5
+  }
+ },
+ "status": 200,
+ "headers": {
+  "content-type": "application/json"
+ },
+ "body": {
+  "molecules": [],
+  "page_meta": {
+   "limit": 5,
+   "next": null,
+   "offset": 0,
+   "previous": null,
+   "total_count": 0
+  }
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "recorded": "2026-11-14",
+ "request": {
+  "url": "https://rest.uniprot.org/uniprotkb/Q9ZZZ9.json",
+  "params": {}
+ },
+ "status": 200,
+ "headers": {
+  "content-type": "application/json",
+  "x-uniprot-release": "2026_04",
+  "x-uniprot-release-date": "04-November-2026"
+ },
+ "body": {
+  "entryType": "Inactive",
+  "primaryAccession": "Q9ZZZ9",
+  "uniProtkbId": "Q9ZZZ9_9HEXA",
+  "inactiveReason": {
+   "inactiveReasonType": "DELETED",
+   "deletedReason": "Not part of a reference proteome"
+  }
+ }
+}

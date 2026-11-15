@@ -1,0 +1,66 @@
+{
+ "recorded": "2026-11-14",
+ "request": {
+  "url": "https://rest.uniprot.org/uniprotkb/search",
+  "params": {
+   "query": "(gene:EGFR) AND organism_id:9606 AND reviewed:true",
+   "fields": "accession,protein_name,gene_names,organism_name,organism_id,length,reviewed",
+   "format": "json",
+   "size": 5
+  }
+ },
+ "status": 200,
+ "headers": {
+  "content-type": "application/json",
+  "x-uniprot-release": "2026_04",
+  "x-total-results": "1",
+  "x-uniprot-release-date": "04-November-2026"
+ },
+ "body": {
+  "results": [
+   {
+    "entryType": "UniProtKB reviewed (Swiss-Prot)",
+    "primaryAccession": "P00533",
+    "organism": {
+     "scientificName": "Homo sapiens",
+     "commonName": "Human",
+     "taxonId": 9606
+    },
+    "proteinDescription": {
+     "recommendedName": {
+      "fullName": {
+       "evidences": [
+        {
+         "evidenceCode": "ECO:0000305"
+        }
+       ],
+       "value": "Epidermal growth factor receptor"
+      }
+     }
+    },
+    "genes": [
+     {
+      "geneName": {
+       "evidences": [
+        {
+         "evidenceCode": "ECO:0000303",
+         "source": "PubMed",
+         "id": "32926474"
+        },
+        {
+         "evidenceCode": "ECO:0000312",
+         "source": "HGNC",
+         "id": "HGNC:3236"
+        }
+       ],
+       "value": "EGFR"
+      }
+     }
+    ],
+    "sequence": {
+     "length": 1210
+    }
+   }
+  ]
+ }
+}

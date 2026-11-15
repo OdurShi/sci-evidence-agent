@@ -1,0 +1,8 @@
+{
+ "synthetic": true,
+ "note": "Hand-written. Shape of the NCBI rate-limit answer with a short Retry-After.",
+ "request": {"url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi", "params": {}},
+ "status": 429,
+ "headers": {"content-type": "application/json", "retry-after": "2", "x-ratelimit-limit": "3", "x-ratelimit-remaining": "0"},
+ "body": {"error": "API rate limit exceeded", "count": "4"}
+}

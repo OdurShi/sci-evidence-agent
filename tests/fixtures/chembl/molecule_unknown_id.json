@@ -1,0 +1,12 @@
+{
+ "recorded": "2026-11-14",
+ "request": {
+  "url": "https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL99999999.json",
+  "params": {}
+ },
+ "status": 404,
+ "headers": {
+  "content-type": "text/html; charset=utf-8"
+ },
+ "body": ""
+}

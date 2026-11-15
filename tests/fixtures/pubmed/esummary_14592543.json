@@ -1,0 +1,65 @@
+{
+ "recorded": "2026-11-14",
+ "request": {
+  "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi",
+  "params": {
+   "tool": "sci-evidence-agent",
+   "db": "pubmed",
+   "retmode": "json",
+   "id": "14592543"
+  }
+ },
+ "status": 200,
+ "headers": {
+  "content-type": "application/json; charset=UTF-8",
+  "x-ratelimit-limit": "3",
+  "x-ratelimit-remaining": "2"
+ },
+ "body": {
+  "header": {
+   "type": "esummary",
+   "version": "0.3"
+  },
+  "result": {
+   "uids": [
+    "14592543"
+   ],
+   "14592543": {
+    "uid": "14592543",
+    "pubdate": "2003 Jun 15",
+    "source": "Thromb Res",
+    "title": "The mechanism of action of aspirin.",
+    "fulljournalname": "Thrombosis research",
+    "articleids": [
+     {
+      "idtype": "pubmed",
+      "idtypen": 1,
+      "value": "14592543"
+     },
+     {
+      "idtype": "doi",
+      "idtypen": 3,
+      "value": "10.1016/s0049-3848(03)00379-7"
+     },
+     {
+      "idtype": "pii",
+      "idtypen": 4,
+      "value": "S0049384803003797"
+     }
+    ],
+    "authors": [
+     {
+      "name": "Vane JR",
+      "authtype": "Author",
+      "clusterid": ""
+     },
+     {
+      "name": "Botting RM",
+      "authtype": "Author",
+      "clusterid": ""
+     }
+    ]
+   }
+  }
+ }
+}

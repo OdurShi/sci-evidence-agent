@@ -1,0 +1,8 @@
+{
+ "synthetic": true,
+ "note": "Hand-written. PubChem answers overload with HTTP 503 and an HTML page; this cannot be provoked on demand.",
+ "request": {"url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/aspirin/property/MolecularFormula,SMILES,InChIKey,MolecularWeight,IUPACName/JSON", "params": {}},
+ "status": 503,
+ "headers": {"content-type": "text/html", "x-throttling-control": "Request Count status: Black (100%), Request Time status: Green (0%), Service status: Red (90%)"},
+ "body": "<html><head><title>503 Service Unavailable</title></head><body><h1>Server Busy</h1><p>Too many requests or server too busy.</p></body></html>"
+}

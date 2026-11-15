@@ -1,0 +1,21 @@
+{
+ "recorded": "2026-11-14",
+ "request": {
+  "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/999999999/property/MolecularFormula,SMILES,InChIKey,MolecularWeight,IUPACName/JSON",
+  "params": {}
+ },
+ "status": 200,
+ "headers": {
+  "x-throttling-control": "Request Count status: Green (1%), Request Time status: Green (0%), Service status: Green (20%)",
+  "content-type": "application/json"
+ },
+ "body": {
+  "PropertyTable": {
+   "Properties": [
+    {
+     "CID": 999999999
+    }
+   ]
+  }
+ }
+}

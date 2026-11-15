@@ -1,0 +1,34 @@
+{
+ "recorded": "2026-11-14",
+ "request": {
+  "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/stearate/property/MolecularFormula,SMILES,InChIKey,MolecularWeight,IUPACName/JSON",
+  "params": {}
+ },
+ "status": 200,
+ "headers": {
+  "x-throttling-control": "Request Count status: Green (0%), Request Time status: Green (0%), Service status: Green (13%)",
+  "content-type": "application/json"
+ },
+ "body": {
+  "PropertyTable": {
+   "Properties": [
+    {
+     "CID": 3033836,
+     "MolecularFormula": "C18H35O2-",
+     "MolecularWeight": "283.5",
+     "SMILES": "CCCCCCCCCCCCCCCCCC(=O)[O-]",
+     "InChIKey": "QIQXTHQIDYTFRH-UHFFFAOYSA-M",
+     "IUPACName": "octadecanoate"
+    },
+    {
+     "CID": 5281,
+     "MolecularFormula": "C18H36O2",
+     "MolecularWeight": "284.5",
+     "SMILES": "CCCCCCCCCCCCCCCCCC(=O)O",
+     "InChIKey": "QIQXTHQIDYTFRH-UHFFFAOYSA-N",
+     "IUPACName": "octadecanoic acid"
+    }
+   ]
+  }
+ }
+}

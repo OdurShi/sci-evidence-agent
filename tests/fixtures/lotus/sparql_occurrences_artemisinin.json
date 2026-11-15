@@ -1,0 +1,83 @@
+{
+ "recorded": "2026-11-14",
+ "request": {
+  "url": "https://query.wikidata.org/sparql",
+  "params": {
+   "query": "\nSELECT ?compound ?taxonItem ?taxonName WHERE {\n  ?compound wdt:P235 \"BLUAFEHZUWYNDE-NNWCWBAJSA-N\" .\n  ?compound p:P703 ?stmt .\n  ?stmt ps:P703 ?taxonItem .\n  ?taxonItem wdt:P225 ?taxonName .\n} LIMIT 4\n",
+   "format": "json"
+  }
+ },
+ "status": 200,
+ "headers": {
+  "content-type": "application/sparql-results+json;charset=utf-8"
+ },
+ "body": {
+  "head": {
+   "vars": [
+    "compound",
+    "taxonItem",
+    "taxonName"
+   ]
+  },
+  "results": {
+   "bindings": [
+    {
+     "compound": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q426921"
+     },
+     "taxonItem": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q25686"
+     },
+     "taxonName": {
+      "type": "literal",
+      "value": "Artemisia absinthium"
+     }
+    },
+    {
+     "compound": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q426921"
+     },
+     "taxonItem": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q26663"
+     },
+     "taxonName": {
+      "type": "literal",
+      "value": "Artemisia vulgaris"
+     }
+    },
+    {
+     "compound": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q426921"
+     },
+     "taxonItem": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q135698"
+     },
+     "taxonName": {
+      "type": "literal",
+      "value": "Artemisia herba-alba"
+     }
+    },
+    {
+     "compound": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q426921"
+     },
+     "taxonItem": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q147358"
+     },
+     "taxonName": {
+      "type": "literal",
+      "value": "Penicillium expansum"
+     }
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,8 @@
+{
+ "synthetic": true,
+ "note": "Status, Retry-After value and error wording as observed from query.wikidata.org on 2026-11-14 when a second query followed the first after 8 s. The HTML was rewritten by hand; the real page also echoes the client IP address, which is replaced by a documentation address here.",
+ "request": {"url": "https://query.wikidata.org/sparql", "params": {}},
+ "status": 429,
+ "headers": {"content-type": "text/html; charset=utf-8", "retry-after": "1000"},
+ "body": "<!DOCTYPE html><html lang=\"en\"><meta charset=\"utf-8\"><title>Wikimedia Error</title><style>* { margin: 0; padding: 0; }</style><div class=\"content\"><h1>Error</h1><p>Aggressively rate-limiting to 1 req / min - this rule was created during active wdqs outage</p></div><div class=\"footer\"><p>Error: 429, Aggressively rate-limiting to 1 req / min. Sensitive client information IP address: 192.0.2.44</p></div></html>"
+}

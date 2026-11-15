@@ -1,0 +1,64 @@
+{
+ "recorded": "2026-11-14",
+ "request": {
+  "url": "https://www.wikidata.org/w/api.php",
+  "params": {
+   "action": "wbgetentities",
+   "ids": "Q426921",
+   "format": "json",
+   "props": "labels|claims",
+   "languages": "en"
+  }
+ },
+ "status": 200,
+ "headers": {
+  "content-type": "application/json; charset=utf-8"
+ },
+ "body": {
+  "entities": {
+   "Q426921": {
+    "type": "item",
+    "id": "Q426921",
+    "labels": {
+     "en": {
+      "language": "en",
+      "value": "artemisinin"
+     }
+    },
+    "claims": {
+     "P235": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P235",
+        "hash": "0ab043400d51e23a0f873c0469cbf8579cdf94f6",
+        "datavalue": {
+         "value": "BLUAFEHZUWYNDE-NNWCWBAJSA-N",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "rank": "normal"
+      }
+     ],
+     "P233": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P233",
+        "hash": "bd038b7c48b42edf7f8e67f753961ef18cb6979d",
+        "datavalue": {
+         "value": "O=C1OC2OC3(OOC24C(CCC(C)C4CC3)C1C)C",
+         "type": "string"
+        },
+        "datatype": "string"
+       },
+       "rank": "normal"
+      }
+     ]
+    }
+   }
+  },
+  "success": 1
+ }
+}

@@ -1,0 +1,8 @@
+{
+ "synthetic": true,
+ "note": "Hand-written generic server error.",
+ "request": {"url": "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json", "params": {"q": "aspirin", "limit": 3}},
+ "status": 500,
+ "headers": {"content-type": "application/json"},
+ "body": {"error_message": "Internal server error"}
+}

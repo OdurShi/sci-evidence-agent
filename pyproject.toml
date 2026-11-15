@@ -1,0 +1,68 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sci-evidence-agent"
+version = "0.2.0"
+description = "Tool-calling agent that answers chemistry and biology questions from public databases, with archived provenance and identifier verification."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "The authors" }]
+keywords = ["ai-for-science", "tool-calling", "provenance", "pubchem", "chembl", "uniprot", "pubmed", "lotus"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Scientific/Engineering :: Chemistry",
+]
+dependencies = [
+    "httpx>=0.27",
+    "pydantic>=2.6",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+anthropic = ["anthropic>=2.3"]
+openai = ["openai>=1.40"]
+ui = ["streamlit>=1.50", "pandas>=2.0"]
+eval = ["matplotlib>=3.8"]
+dev = ["pytest>=8.0", "ruff>=0.17,<0.18"]  # ruff pinned: its formatter output is checked in CI
+
+[project.scripts]
+sci-evidence = "sci_evidence_agent.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sci_evidence_agent"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["tests"]
+addopts = "-m 'not live' --strict-markers"
+markers = [
+    "live: sends real requests to the public database APIs (deselected by default; run with -m live)",
+    "lotus: live test against the Wikidata Query Service, which allowed one request per minute when measured (run with -m lotus)",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+src = ["src", "tests"]
+extend-exclude = ["results", "figures"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF"]
+ignore = [
+    "RUF001", # ambiguous unicode: the planner matches CJK keywords on purpose
+    "RUF002",
+    "RUF003",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["B011"]

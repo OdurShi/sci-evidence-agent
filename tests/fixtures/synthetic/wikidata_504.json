@@ -1,0 +1,8 @@
+{
+ "synthetic": true,
+ "note": "Hand-written. The query service answers heavy queries with HTTP 504.",
+ "request": {"url": "https://query.wikidata.org/sparql", "params": {}},
+ "status": 504,
+ "headers": {"content-type": "text/html"},
+ "body": "<html><body><h1>504 Gateway Time-out</h1></body></html>"
+}

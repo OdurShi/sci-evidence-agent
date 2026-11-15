@@ -1,0 +1,293 @@
+{
+ "recorded": "2026-11-14",
+ "request": {
+  "url": "https://query.wikidata.org/sparql",
+  "params": {
+   "query": "\nSELECT ?compound ?inchikey ?smiles ?ref ?taxonItem WHERE {\n  ?taxonItem wdt:P225 \"Artemisia annua\" .\n  ?compound p:P703 ?stmt .\n  ?stmt ps:P703 ?taxonItem .\n  OPTIONAL { ?compound wdt:P235 ?inchikey }\n  OPTIONAL { ?compound wdt:P233 ?smiles }\n  OPTIONAL { ?stmt prov:wasDerivedFrom/pr:P248 ?ref }\n} LIMIT 12\n",
+   "format": "json"
+  }
+ },
+ "status": 200,
+ "headers": {
+  "content-type": "application/sparql-results+json;charset=utf-8"
+ },
+ "body": {
+  "head": {
+   "vars": [
+    "compound",
+    "inchikey",
+    "smiles",
+    "ref",
+    "taxonItem"
+   ]
+  },
+  "results": {
+   "bindings": [
+    {
+     "taxonItem": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q1308044"
+     },
+     "compound": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q15427839"
+     },
+     "inchikey": {
+      "type": "literal",
+      "value": "FPLMIPQZHHQWHN-UHFFFAOYSA-N"
+     },
+     "smiles": {
+      "type": "literal",
+      "value": "COC1=C(C=C(C=C1)C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O"
+     },
+     "ref": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q104852270"
+     }
+    },
+    {
+     "taxonItem": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q1308044"
+     },
+     "compound": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q15634189"
+     },
+     "inchikey": {
+      "type": "literal",
+      "value": "VKOSQMWSWLZQPA-UHFFFAOYSA-N"
+     },
+     "smiles": {
+      "type": "literal",
+      "value": "COC1=C(C=CC(=C1)C2=CC(=O)C3=C(C(=C(C=C3O2)OC)OC)O)O"
+     },
+     "ref": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q38949746"
+     }
+    },
+    {
+     "taxonItem": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q1308044"
+     },
+     "compound": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q15634189"
+     },
+     "inchikey": {
+      "type": "literal",
+      "value": "VKOSQMWSWLZQPA-UHFFFAOYSA-N"
+     },
+     "smiles": {
+      "type": "literal",
+      "value": "COC1=C(C=CC(=C1)C2=CC(=O)C3=C(C(=C(C=C3O2)OC)OC)O)O"
+     },
+     "ref": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q34150585"
+     }
+    },
+    {
+     "taxonItem": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q1308044"
+     },
+     "compound": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q15634189"
+     },
+     "inchikey": {
+      "type": "literal",
+      "value": "VKOSQMWSWLZQPA-UHFFFAOYSA-N"
+     },
+     "smiles": {
+      "type": "literal",
+      "value": "COC1=C(C=CC(=C1)C2=CC(=O)C3=C(C(=C(C=C3O2)OC)OC)O)O"
+     },
+     "ref": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q34384045"
+     }
+    },
+    {
+     "taxonItem": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q1308044"
+     },
+     "compound": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q15634189"
+     },
+     "inchikey": {
+      "type": "literal",
+      "value": "VKOSQMWSWLZQPA-UHFFFAOYSA-N"
+     },
+     "smiles": {
+      "type": "literal",
+      "value": "COC1=C(C=CC(=C1)C2=CC(=O)C3=C(C(=C(C=C3O2)OC)OC)O)O"
+     },
+     "ref": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q104214488"
+     }
+    },
+    {
+     "taxonItem": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q1308044"
+     },
+     "compound": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q15634189"
+     },
+     "inchikey": {
+      "type": "literal",
+      "value": "VKOSQMWSWLZQPA-UHFFFAOYSA-N"
+     },
+     "smiles": {
+      "type": "literal",
+      "value": "COC1=C(C=CC(=C1)C2=CC(=O)C3=C(C(=C(C=C3O2)OC)OC)O)O"
+     },
+     "ref": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q104852270"
+     }
+    },
+    {
+     "taxonItem": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q1308044"
+     },
+     "compound": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q15634194"
+     },
+     "inchikey": {
+      "type": "literal",
+      "value": "IZWKTABKAJGBFW-UHFFFAOYSA-N"
+     },
+     "smiles": {
+      "type": "literal",
+      "value": "COC1=C(C=C(C(=C1)C2=CC(=O)C3=C(C(=C(C=C3O2)OC)OC)O)O)O"
+     },
+     "ref": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q104852270"
+     }
+    },
+    {
+     "taxonItem": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q1308044"
+     },
+     "compound": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q15644616"
+     },
+     "inchikey": {
+      "type": "literal",
+      "value": "DTGKSKDOIYIVQL-MRTMQBJTSA-N"
+     },
+     "smiles": {
+      "type": "literal",
+      "value": "CC1(C2CCC1(C(C2)O)C)C"
+     },
+     "ref": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q104247573"
+     }
+    },
+    {
+     "taxonItem": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q1308044"
+     },
+     "compound": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q161572"
+     },
+     "inchikey": {
+      "type": "literal",
+      "value": "WEEGYLXZBRQIMU-UHFFFAOYSA-N"
+     },
+     "smiles": {
+      "type": "literal",
+      "value": "CC1(C2CCC(O1)(CC2)C)C"
+     },
+     "ref": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q104247110"
+     }
+    },
+    {
+     "taxonItem": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q1308044"
+     },
+     "compound": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q161572"
+     },
+     "inchikey": {
+      "type": "literal",
+      "value": "WEEGYLXZBRQIMU-UHFFFAOYSA-N"
+     },
+     "smiles": {
+      "type": "literal",
+      "value": "CC1(C2CCC(O1)(CC2)C)C"
+     },
+     "ref": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q104910881"
+     }
+    },
+    {
+     "taxonItem": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q1308044"
+     },
+     "compound": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q161572"
+     },
+     "inchikey": {
+      "type": "literal",
+      "value": "WEEGYLXZBRQIMU-UHFFFAOYSA-N"
+     },
+     "smiles": {
+      "type": "literal",
+      "value": "CC1(C2CCC(O1)(CC2)C)C"
+     },
+     "ref": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q43865348"
+     }
+    },
+    {
+     "taxonItem": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q1308044"
+     },
+     "compound": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q16676086"
+     },
+     "inchikey": {
+      "type": "literal",
+      "value": "FLIACVVOZYBSBS-UHFFFAOYSA-N"
+     },
+     "smiles": {
+      "type": "literal",
+      "value": "CCCCCCCCCCCCCCCC(=O)OC"
+     },
+     "ref": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q104910881"
+     }
+    }
+   ]
+  }
+ }
+}

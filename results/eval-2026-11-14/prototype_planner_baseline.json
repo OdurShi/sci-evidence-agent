@@ -1,0 +1,922 @@
+{
+ "what": "Prototype keyword planner (providers/offline.py of the prototype, copied unchanged) on benchmark/questions.json; planning only, no network. tool_rounds_match compares tool names per round; a chain that the benchmark expects to stop early counts as a match when its first rounds match. entity is the single string the prototype would have sent to every tool; entity_is_generic_word marks the cases where that string is a question word or a generic noun rather than a compound, gene or search term (list in generic_words).",
+ "n": 34,
+ "tool_rounds_match": 22,
+ "questions": [
+  {
+   "id": "C01",
+   "category": "compound",
+   "entity": "What",
+   "planned_tools": [
+    [
+     "search_compound"
+    ]
+   ],
+   "first_arguments": [
+    {
+     "query": "What",
+     "limit": 5
+    }
+   ],
+   "expected_tools": [
+    [
+     "search_compound"
+    ]
+   ],
+   "tool_rounds_match": true,
+   "entity_is_generic_word": true
+  },
+  {
+   "id": "C02",
+   "category": "compound",
+   "entity": "Look",
+   "planned_tools": [
+    [
+     "search_compound"
+    ]
+   ],
+   "first_arguments": [
+    {
+     "query": "Look",
+     "limit": 5
+    }
+   ],
+   "expected_tools": [
+    [
+     "search_compound"
+    ]
+   ],
+   "tool_rounds_match": true,
+   "entity_is_generic_word": true
+  },
+  {
+   "id": "C03",
+   "category": "compound",
+   "entity": "ibuprofen",
+   "planned_tools": [
+    [
+     "search_compound"
+    ]
+   ],
+   "first_arguments": [
+    {
+     "query": "ibuprofen",
+     "limit": 5
+    }
+   ],
+   "expected_tools": [
+    [
+     "search_compound"
+    ]
+   ],
+   "tool_rounds_match": true,
+   "entity_is_generic_word": false
+  },
+  {
+   "id": "C04",
+   "category": "compound",
+   "entity": "record",
+   "planned_tools": [
+    [
+     "search_compound"
+    ]
+   ],
+   "first_arguments": [
+    {
+     "query": "record",
+     "limit": 5
+    }
+   ],
+   "expected_tools": [
+    [
+     "search_compound"
+    ]
+   ],
+   "tool_rounds_match": true,
+   "entity_is_generic_word": true
+  },
+  {
+   "id": "C05",
+   "category": "compound",
+   "entity": "What",
+   "planned_tools": [
+    [
+     "search_compound"
+    ]
+   ],
+   "first_arguments": [
+    {
+     "query": "What",
+     "limit": 5
+    }
+   ],
+   "expected_tools": [
+    [
+     "search_compound"
+    ]
+   ],
+   "tool_rounds_match": true,
+   "entity_is_generic_word": true
+  },
+  {
+   "id": "C06",
+   "category": "compound",
+   "entity": "record",
+   "planned_tools": [
+    [
+     "search_compound"
+    ]
+   ],
+   "first_arguments": [
+    {
+     "query": "record",
+     "limit": 5
+    }
+   ],
+   "expected_tools": [
+    [
+     "search_compound"
+    ]
+   ],
+   "tool_rounds_match": true,
+   "entity_is_generic_word": true
+  },
+  {
+   "id": "B01",
+   "category": "bioactivity_chain",
+   "entity": "bioactivity",
+   "planned_tools": [
+    [
+     "search_chembl_molecule"
+    ],
+    [
+     "get_bioactivities"
+    ]
+   ],
+   "first_arguments": [
+    {
+     "query": "bioactivity",
+     "limit": 5
+    }
+   ],
+   "expected_tools": [
+    [
+     "search_chembl_molecule"
+    ],
+    [
+     "get_bioactivities"
+    ]
+   ],
+   "tool_rounds_match": true,
+   "entity_is_generic_word": true
+  },
+  {
+   "id": "B02",
+   "category": "bioactivity_chain",
+   "entity": "bioactivities",
+   "planned_tools": [
+    [
+     "search_chembl_molecule"
+    ],
+    [
+     "get_bioactivities"
+    ]
+   ],
+   "first_arguments": [
+    {
+     "query": "bioactivities",
+     "limit": 5
+    }
+   ],
+   "expected_tools": [
+    [
+     "get_bioactivities"
+    ]
+   ],
+   "tool_rounds_match": false,
+   "entity_is_generic_word": true
+  },
+  {
+   "id": "B03",
+   "category": "bioactivity_chain",
+   "entity": "caffeine",
+   "planned_tools": [
+    [
+     "search_chembl_molecule"
+    ],
+    [
+     "get_bioactivities"
+    ]
+   ],
+   "first_arguments": [
+    {
+     "query": "caffeine",
+     "limit": 5
+    }
+   ],
+   "expected_tools": [
+    [
+     "search_chembl_molecule"
+    ],
+    [
+     "get_bioactivities"
+    ]
+   ],
+   "tool_rounds_match": true,
+   "entity_is_generic_word": false
+  },
+  {
+   "id": "B04",
+   "category": "bioactivity_chain",
+   "entity": "Which",
+   "planned_tools": [
+    [
+     "search_chembl_molecule"
+    ],
+    [
+     "get_bioactivities"
+    ]
+   ],
+   "first_arguments": [
+    {
+     "query": "Which",
+     "limit": 5
+    }
+   ],
+   "expected_tools": [
+    [
+     "search_chembl_molecule"
+    ],
+    [
+     "get_bioactivities"
+    ]
+   ],
+   "tool_rounds_match": true,
+   "entity_is_generic_word": true
+  },
+  {
+   "id": "B05",
+   "category": "bioactivity_chain",
+   "entity": "bioactivity",
+   "planned_tools": [
+    [
+     "search_chembl_molecule"
+    ],
+    [
+     "get_bioactivities"
+    ]
+   ],
+   "first_arguments": [
+    {
+     "query": "bioactivity",
+     "limit": 5
+    }
+   ],
+   "expected_tools": [
+    [
+     "search_chembl_molecule"
+    ]
+   ],
+   "tool_rounds_match": true,
+   "entity_is_generic_word": true
+  },
+  {
+   "id": "B06",
+   "category": "bioactivity_chain",
+   "entity": "bioactivity",
+   "planned_tools": [
+    [
+     "search_compound",
+     "search_chembl_molecule"
+    ],
+    [
+     "get_bioactivities"
+    ]
+   ],
+   "first_arguments": [
+    {
+     "query": "bioactivity",
+     "limit": 5
+    },
+    {
+     "query": "bioactivity",
+     "limit": 5
+    }
+   ],
+   "expected_tools": [
+    [
+     "search_chembl_molecule"
+    ]
+   ],
+   "tool_rounds_match": false,
+   "entity_is_generic_word": true
+  },
+  {
+   "id": "B07",
+   "category": "bioactivity_chain",
+   "entity": "bioactivity",
+   "planned_tools": [
+    [
+     "search_chembl_molecule"
+    ],
+    [
+     "get_bioactivities"
+    ]
+   ],
+   "first_arguments": [
+    {
+     "query": "bioactivity",
+     "limit": 5
+    }
+   ],
+   "expected_tools": [
+    [
+     "get_bioactivities"
+    ]
+   ],
+   "tool_rounds_match": false,
+   "entity_is_generic_word": true
+  },
+  {
+   "id": "P01",
+   "category": "protein",
+   "entity": "entry",
+   "planned_tools": [
+    [
+     "search_protein"
+    ]
+   ],
+   "first_arguments": [
+    {
+     "query": "gene:entry",
+     "organism_id": 9606,
+     "reviewed_only": true,
+     "limit": 5
+    }
+   ],
+   "expected_tools": [
+    [
+     "search_protein"
+    ]
+   ],
+   "tool_rounds_match": true,
+   "entity_is_generic_word": true
+  },
+  {
+   "id": "P02",
+   "category": "protein",
+   "entity": "PTGS1",
+   "planned_tools": [
+    [
+     "search_protein"
+    ]
+   ],
+   "first_arguments": [
+    {
+     "query": "gene:PTGS1",
+     "organism_id": 9606,
+     "reviewed_only": true,
+     "limit": 5
+    }
+   ],
+   "expected_tools": [
+    [
+     "search_protein"
+    ]
+   ],
+   "tool_rounds_match": true,
+   "entity_is_generic_word": false
+  },
+  {
+   "id": "P03",
+   "category": "protein",
+   "entity": "Retrieve",
+   "planned_tools": [
+    [
+     "search_protein"
+    ]
+   ],
+   "first_arguments": [
+    {
+     "query": "gene:Retrieve",
+     "organism_id": 9606,
+     "reviewed_only": true,
+     "limit": 5
+    }
+   ],
+   "expected_tools": [
+    [
+     "search_protein"
+    ]
+   ],
+   "tool_rounds_match": true,
+   "entity_is_generic_word": true
+  },
+  {
+   "id": "P04",
+   "category": "protein",
+   "entity": "What",
+   "planned_tools": [
+    [
+     "search_protein"
+    ]
+   ],
+   "first_arguments": [
+    {
+     "query": "gene:What",
+     "organism_id": 9606,
+     "reviewed_only": true,
+     "limit": 5
+    }
+   ],
+   "expected_tools": [
+    [
+     "search_protein"
+    ]
+   ],
+   "tool_rounds_match": true,
+   "entity_is_generic_word": true
+  },
+  {
+   "id": "P05",
+   "category": "protein",
+   "entity": "entry",
+   "planned_tools": [
+    [
+     "search_protein"
+    ]
+   ],
+   "first_arguments": [
+    {
+     "query": "gene:entry",
+     "organism_id": 9606,
+     "reviewed_only": true,
+     "limit": 5
+    }
+   ],
+   "expected_tools": [
+    [
+     "search_protein"
+    ]
+   ],
+   "tool_rounds_match": true,
+   "entity_is_generic_word": true
+  },
+  {
+   "id": "P06",
+   "category": "protein",
+   "entity": "Which",
+   "planned_tools": [
+    [
+     "search_protein"
+    ]
+   ],
+   "first_arguments": [
+    {
+     "query": "gene:Which",
+     "organism_id": 9606,
+     "reviewed_only": true,
+     "limit": 5
+    }
+   ],
+   "expected_tools": [
+    [
+     "search_protein"
+    ]
+   ],
+   "tool_rounds_match": true,
+   "entity_is_generic_word": true
+  },
+  {
+   "id": "P07",
+   "category": "protein",
+   "entity": "kinase",
+   "planned_tools": [
+    [
+     "search_protein",
+     "search_chembl_molecule"
+    ],
+    [
+     "get_bioactivities"
+    ]
+   ],
+   "first_arguments": [
+    {
+     "query": "gene:kinase",
+     "organism_id": 9606,
+     "reviewed_only": true,
+     "limit": 5
+    },
+    {
+     "query": "kinase",
+     "limit": 5
+    }
+   ],
+   "expected_tools": [
+    [
+     "search_protein"
+    ]
+   ],
+   "tool_rounds_match": false,
+   "entity_is_generic_word": false
+  },
+  {
+   "id": "L01",
+   "category": "literature",
+   "entity": "Fetch",
+   "planned_tools": [
+    [
+     "search_literature"
+    ]
+   ],
+   "first_arguments": [
+    {
+     "term": "Fetch",
+     "limit": 5,
+     "sort": "relevance"
+    }
+   ],
+   "expected_tools": [
+    [
+     "get_article"
+    ]
+   ],
+   "tool_rounds_match": false,
+   "entity_is_generic_word": true
+  },
+  {
+   "id": "L02",
+   "category": "literature",
+   "entity": "paper",
+   "planned_tools": [
+    [
+     "search_protein",
+     "search_literature"
+    ]
+   ],
+   "first_arguments": [
+    {
+     "query": "gene:paper",
+     "organism_id": 9606,
+     "reviewed_only": true,
+     "limit": 5
+    },
+    {
+     "term": "paper",
+     "limit": 5,
+     "sort": "relevance"
+    }
+   ],
+   "expected_tools": [
+    [
+     "search_literature"
+    ]
+   ],
+   "tool_rounds_match": false,
+   "entity_is_generic_word": true
+  },
+  {
+   "id": "L03",
+   "category": "literature",
+   "entity": "aspirin",
+   "planned_tools": [
+    [
+     "search_literature"
+    ]
+   ],
+   "first_arguments": [
+    {
+     "term": "aspirin",
+     "limit": 5,
+     "sort": "relevance"
+    }
+   ],
+   "expected_tools": [
+    [
+     "search_literature"
+    ]
+   ],
+   "tool_rounds_match": true,
+   "entity_is_generic_word": false
+  },
+  {
+   "id": "L04",
+   "category": "literature",
+   "entity": "Which",
+   "planned_tools": [
+    [
+     "search_literature"
+    ]
+   ],
+   "first_arguments": [
+    {
+     "term": "Which",
+     "limit": 5,
+     "sort": "relevance"
+    }
+   ],
+   "expected_tools": [
+    [
+     "search_literature"
+    ]
+   ],
+   "tool_rounds_match": true,
+   "entity_is_generic_word": true
+  },
+  {
+   "id": "L05",
+   "category": "literature",
+   "entity": "Retrieve",
+   "planned_tools": [
+    [
+     "search_literature"
+    ]
+   ],
+   "first_arguments": [
+    {
+     "term": "Retrieve",
+     "limit": 5,
+     "sort": "relevance"
+    }
+   ],
+   "expected_tools": [
+    [
+     "get_article"
+    ]
+   ],
+   "tool_rounds_match": false,
+   "entity_is_generic_word": true
+  },
+  {
+   "id": "L06",
+   "category": "literature",
+   "entity": "papers",
+   "planned_tools": [
+    [
+     "search_literature"
+    ]
+   ],
+   "first_arguments": [
+    {
+     "term": "papers",
+     "limit": 5,
+     "sort": "relevance"
+    }
+   ],
+   "expected_tools": [
+    [
+     "search_literature"
+    ]
+   ],
+   "tool_rounds_match": true,
+   "entity_is_generic_word": true
+  },
+  {
+   "id": "L07",
+   "category": "literature",
+   "entity": "Fetch",
+   "planned_tools": [
+    [
+     "search_literature"
+    ]
+   ],
+   "first_arguments": [
+    {
+     "term": "Fetch",
+     "limit": 5,
+     "sort": "relevance"
+    }
+   ],
+   "expected_tools": [
+    [
+     "get_article",
+     "get_article"
+    ]
+   ],
+   "tool_rounds_match": false,
+   "entity_is_generic_word": true
+  },
+  {
+   "id": "X01",
+   "category": "cross_source",
+   "entity": "aspirin",
+   "planned_tools": [
+    [
+     "search_protein",
+     "search_literature"
+    ]
+   ],
+   "first_arguments": [
+    {
+     "query": "gene:aspirin",
+     "organism_id": 9606,
+     "reviewed_only": true,
+     "limit": 5
+    },
+    {
+     "term": "aspirin",
+     "limit": 5,
+     "sort": "relevance"
+    }
+   ],
+   "expected_tools": [
+    [
+     "search_compound",
+     "search_protein",
+     "search_literature"
+    ]
+   ],
+   "tool_rounds_match": false,
+   "entity_is_generic_word": false
+  },
+  {
+   "id": "X02",
+   "category": "cross_source",
+   "entity": "record",
+   "planned_tools": [
+    [
+     "search_compound",
+     "search_chembl_molecule"
+    ],
+    [
+     "get_bioactivities"
+    ]
+   ],
+   "first_arguments": [
+    {
+     "query": "record",
+     "limit": 5
+    },
+    {
+     "query": "record",
+     "limit": 5
+    }
+   ],
+   "expected_tools": [
+    [
+     "search_compound",
+     "search_chembl_molecule"
+    ],
+    [
+     "get_bioactivities"
+    ]
+   ],
+   "tool_rounds_match": true,
+   "entity_is_generic_word": true
+  },
+  {
+   "id": "X03",
+   "category": "cross_source",
+   "entity": "human",
+   "planned_tools": [
+    [
+     "search_protein",
+     "search_literature"
+    ]
+   ],
+   "first_arguments": [
+    {
+     "query": "gene:human",
+     "organism_id": 9606,
+     "reviewed_only": true,
+     "limit": 5
+    },
+    {
+     "term": "human",
+     "limit": 5,
+     "sort": "relevance"
+    }
+   ],
+   "expected_tools": [
+    [
+     "search_protein",
+     "search_literature"
+    ]
+   ],
+   "tool_rounds_match": true,
+   "entity_is_generic_word": true
+  },
+  {
+   "id": "X04",
+   "category": "cross_source",
+   "entity": "Which",
+   "planned_tools": [
+    [
+     "search_literature"
+    ]
+   ],
+   "first_arguments": [
+    {
+     "term": "Which",
+     "limit": 5,
+     "sort": "relevance"
+    }
+   ],
+   "expected_tools": [
+    [
+     "search_by_taxon"
+    ]
+   ],
+   "tool_rounds_match": false,
+   "entity_is_generic_word": true
+  },
+  {
+   "id": "X05",
+   "category": "cross_source",
+   "entity": "which",
+   "planned_tools": [
+    [
+     "search_compound"
+    ]
+   ],
+   "first_arguments": [
+    {
+     "query": "which",
+     "limit": 5
+    }
+   ],
+   "expected_tools": [
+    [
+     "search_occurrences"
+    ]
+   ],
+   "tool_rounds_match": false,
+   "entity_is_generic_word": true
+  },
+  {
+   "id": "X06",
+   "category": "cross_source",
+   "entity": "Where",
+   "planned_tools": [
+    [
+     "search_compound"
+    ]
+   ],
+   "first_arguments": [
+    {
+     "query": "Where",
+     "limit": 5
+    }
+   ],
+   "expected_tools": [
+    [
+     "search_compound"
+    ],
+    [
+     "search_occurrences"
+    ]
+   ],
+   "tool_rounds_match": false,
+   "entity_is_generic_word": true
+  },
+  {
+   "id": "X07",
+   "category": "cross_source",
+   "entity": "record",
+   "planned_tools": [
+    [
+     "search_compound",
+     "search_protein"
+    ]
+   ],
+   "first_arguments": [
+    {
+     "query": "record",
+     "limit": 5
+    },
+    {
+     "query": "gene:record",
+     "organism_id": 9606,
+     "reviewed_only": true,
+     "limit": 5
+    }
+   ],
+   "expected_tools": [
+    [
+     "search_compound",
+     "search_protein"
+    ]
+   ],
+   "tool_rounds_match": true,
+   "entity_is_generic_word": true
+  }
+ ],
+ "entity_is_generic_word": 28,
+ "generic_words": [
+  "Fetch",
+  "Look",
+  "Retrieve",
+  "What",
+  "Where",
+  "Which",
+  "bioactivities",
+  "bioactivity",
+  "entry",
+  "human",
+  "paper",
+  "papers",
+  "record",
+  "which"
+ ],
+ "computed_on": "2026-11-14"
+}

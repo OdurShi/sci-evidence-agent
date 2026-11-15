@@ -1,0 +1,73 @@
+{
+ "recorded": "2026-11-14",
+ "request": {
+  "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json",
+  "params": {
+   "molecule_chembl_id": "CHEMBL25",
+   "limit": 3
+  }
+ },
+ "status": 200,
+ "headers": {
+  "content-type": "application/json"
+ },
+ "body": {
+  "activities": [
+   {
+    "activity_id": 42173,
+    "assay_chembl_id": "CHEMBL702885",
+    "assay_description": "Binding constant against human serum albumin (HSA)",
+    "assay_type": "B",
+    "document_chembl_id": "CHEMBL1134302",
+    "molecule_chembl_id": "CHEMBL25",
+    "molecule_pref_name": "ASPIRIN",
+    "standard_relation": "=",
+    "standard_type": "Log K'",
+    "standard_units": null,
+    "standard_value": "1.39",
+    "target_chembl_id": "CHEMBL3253",
+    "target_organism": "Homo sapiens",
+    "target_pref_name": "Albumin"
+   },
+   {
+    "activity_id": 81965,
+    "assay_chembl_id": "CHEMBL771355",
+    "assay_description": "Antiedema efficacy was measured in male Sprague-Dawley rats relative to aspirin; activity expressed as percent of aspirin",
+    "assay_type": "F",
+    "document_chembl_id": "CHEMBL1121620",
+    "molecule_chembl_id": "CHEMBL25",
+    "molecule_pref_name": "ASPIRIN",
+    "standard_relation": "=",
+    "standard_type": "Activity",
+    "standard_units": "%",
+    "standard_value": "100.0",
+    "target_chembl_id": "CHEMBL376",
+    "target_organism": "Rattus norvegicus",
+    "target_pref_name": "Rattus norvegicus"
+   },
+   {
+    "activity_id": 81966,
+    "assay_chembl_id": "CHEMBL780106",
+    "assay_description": "Effective dose of compound to produce 25% inhibition in rat; Value ranges from 326-499",
+    "assay_type": "F",
+    "document_chembl_id": "CHEMBL1121620",
+    "molecule_chembl_id": "CHEMBL25",
+    "molecule_pref_name": "ASPIRIN",
+    "standard_relation": "=",
+    "standard_type": "ED25",
+    "standard_units": "uM kg-1",
+    "standard_value": "402.0",
+    "target_chembl_id": "CHEMBL376",
+    "target_organism": "Rattus norvegicus",
+    "target_pref_name": "Rattus norvegicus"
+   }
+  ],
+  "page_meta": {
+   "limit": 3,
+   "next": "/chembl/api/data/activity.json?limit=3&offset=3&molecule_chembl_id=CHEMBL25",
+   "offset": 0,
+   "previous": null,
+   "total_count": 4087
+  }
+ }
+}

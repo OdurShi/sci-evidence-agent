@@ -1,0 +1,22 @@
+{
+ "recorded": "2026-11-14",
+ "request": {
+  "url": "https://rest.uniprot.org/uniprotkb/search",
+  "params": {
+   "query": "(gene:ZZZNOTAGENE) AND organism_id:9606 AND reviewed:true",
+   "fields": "accession,protein_name,gene_names,organism_name,organism_id,length,reviewed",
+   "format": "json",
+   "size": 5
+  }
+ },
+ "status": 200,
+ "headers": {
+  "content-type": "application/json",
+  "x-uniprot-release": "2026_04",
+  "x-total-results": "0",
+  "x-uniprot-release-date": "04-November-2026"
+ },
+ "body": {
+  "results": []
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "recorded": "2026-11-14",
+ "request": {
+  "url": "https://query.wikidata.org/sparql",
+  "params": {
+   "query": "\nSELECT ?compound ?inchikey ?smiles ?ref ?taxonItem WHERE {\n  ?taxonItem wdt:P225 \"Zzzznotaspecies annua\" .\n  ?compound p:P703 ?stmt .\n  ?stmt ps:P703 ?taxonItem .\n  OPTIONAL { ?compound wdt:P235 ?inchikey }\n  OPTIONAL { ?compound wdt:P233 ?smiles }\n  OPTIONAL { ?stmt prov:wasDerivedFrom/pr:P248 ?ref }\n} LIMIT 12\n",
+   "format": "json"
+  }
+ },
+ "status": 200,
+ "headers": {
+  "content-type": "application/sparql-results+json;charset=utf-8"
+ },
+ "body": {
+  "head": {
+   "vars": [
+    "compound",
+    "inchikey",
+    "smiles",
+    "ref",
+    "taxonItem"
+   ]
+  },
+  "results": {
+   "bindings": []
+  }
+ }
+}

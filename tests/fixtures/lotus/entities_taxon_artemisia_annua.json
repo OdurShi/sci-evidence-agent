@@ -1,0 +1,548 @@
+{
+ "recorded": "2026-11-14",
+ "request": {
+  "url": "https://www.wikidata.org/w/api.php",
+  "params": {
+   "action": "wbgetentities",
+   "ids": "Q15427839|Q15634189|Q15634194|Q104852270|Q38949746|Q34150585|Q34384045|Q104214488",
+   "format": "json",
+   "props": "labels|claims",
+   "languages": "en"
+  }
+ },
+ "status": 200,
+ "headers": {
+  "content-type": "application/json; charset=utf-8"
+ },
+ "body": {
+  "entities": {
+   "Q15427839": {
+    "type": "item",
+    "id": "Q15427839",
+    "labels": {
+     "en": {
+      "language": "en",
+      "value": "tamarixetin"
+     }
+    },
+    "claims": {
+     "P235": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P235",
+        "hash": "f02043e69a1ff74818ab5fb6329a7d1491d409ec",
+        "datavalue": {
+         "value": "FPLMIPQZHHQWHN-UHFFFAOYSA-N",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "rank": "normal"
+      }
+     ],
+     "P233": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P233",
+        "hash": "dc9edd19b50f44172cd9ddd1871567f19c55454a",
+        "datavalue": {
+         "value": "COC1=C(C=C(C=C1)C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O",
+         "type": "string"
+        },
+        "datatype": "string"
+       },
+       "rank": "normal"
+      }
+     ]
+    }
+   },
+   "Q15634189": {
+    "type": "item",
+    "id": "Q15634189",
+    "labels": {
+     "en": {
+      "language": "en",
+      "value": "fastigenin"
+     }
+    },
+    "claims": {
+     "P235": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P235",
+        "hash": "bd254ce41dda68f4954806c79f73d2093284e553",
+        "datavalue": {
+         "value": "VKOSQMWSWLZQPA-UHFFFAOYSA-N",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "rank": "normal"
+      }
+     ],
+     "P233": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P233",
+        "hash": "3225ac4488973751af33895021a9064fd3e7154e",
+        "datavalue": {
+         "value": "COC1=C(C=CC(=C1)C2=CC(=O)C3=C(C(=C(C=C3O2)OC)OC)O)O",
+         "type": "string"
+        },
+        "datatype": "string"
+       },
+       "rank": "normal"
+      }
+     ]
+    }
+   },
+   "Q15634194": {
+    "type": "item",
+    "id": "Q15634194",
+    "labels": {
+     "en": {
+      "language": "en",
+      "value": "arcapillin"
+     }
+    },
+    "claims": {
+     "P235": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P235",
+        "hash": "b6dc0cfd935d1bac5932a4d1295521b70524e87d",
+        "datavalue": {
+         "value": "IZWKTABKAJGBFW-UHFFFAOYSA-N",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "rank": "normal"
+      }
+     ],
+     "P233": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P233",
+        "hash": "aec342c071322ff620f93cdeee8b8d0eb0c50a82",
+        "datavalue": {
+         "value": "COC1=C(C=C(C(=C1)C2=CC(=O)C3=C(C(=C(C=C3O2)OC)OC)O)O)O",
+         "type": "string"
+        },
+        "datatype": "string"
+       },
+       "rank": "normal"
+      }
+     ]
+    }
+   },
+   "Q104852270": {
+    "type": "item",
+    "id": "Q104852270",
+    "labels": {
+     "en": {
+      "language": "en",
+      "value": "Methoxylated flavones and coumarins from Artemisia annua"
+     }
+    },
+    "claims": {
+     "P356": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P356",
+        "hash": "5c255b180f769470b57d6f2611fb9365a23e3cea",
+        "datavalue": {
+         "value": "10.1016/S0031-9422(00)97776-8",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "rank": "normal"
+      }
+     ],
+     "P577": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P577",
+        "hash": "698a962f7c382c390636eb547dcad88106f8109f",
+        "datavalue": {
+         "value": {
+          "time": "+1989-00-00T00:00:00Z",
+          "timezone": 0,
+          "before": 0,
+          "after": 0,
+          "precision": 9,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+         },
+         "type": "time"
+        },
+        "datatype": "time"
+       },
+       "rank": "normal"
+      }
+     ],
+     "P1476": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P1476",
+        "hash": "6923545bc39b362628674f1bc9a793b6d0da1553",
+        "datavalue": {
+         "value": {
+          "text": "Methoxylated flavones and coumarins from Artemisia annua",
+          "language": "en"
+         },
+         "type": "monolingualtext"
+        },
+        "datatype": "monolingualtext"
+       },
+       "rank": "normal"
+      }
+     ]
+    }
+   },
+   "Q38949746": {
+    "type": "item",
+    "id": "Q38949746",
+    "labels": {
+     "en": {
+      "language": "en",
+      "value": "Antiproliferative activity of Artemisia asiatica extract and its constituents on human tumor cell lines."
+     }
+    },
+    "claims": {
+     "P356": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P356",
+        "hash": "d33342744341f7e7fada37ec2a5df94c59ad4460",
+        "datavalue": {
+         "value": "10.1055/S-0034-1383146",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "rank": "normal"
+      }
+     ],
+     "P698": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P698",
+        "hash": "af8c3ae6a2818c46ffce5fd387c90bffedba3933",
+        "datavalue": {
+         "value": "25295671",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "rank": "normal"
+      }
+     ],
+     "P577": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P577",
+        "hash": "c0731aea10e4e8c43cf89cb2fd2e57da46183867",
+        "datavalue": {
+         "value": {
+          "time": "+2014-10-08T00:00:00Z",
+          "timezone": 0,
+          "before": 0,
+          "after": 0,
+          "precision": 11,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+         },
+         "type": "time"
+        },
+        "datatype": "time"
+       },
+       "rank": "normal"
+      }
+     ],
+     "P1476": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P1476",
+        "hash": "33ffaaffe2c84818e2389728e4406fe1c8715efe",
+        "datavalue": {
+         "value": {
+          "text": "Antiproliferative activity of Artemisia asiatica extract and its constituents on human tumor cell lines",
+          "language": "en"
+         },
+         "type": "monolingualtext"
+        },
+        "datatype": "monolingualtext"
+       },
+       "rank": "normal"
+      }
+     ]
+    }
+   },
+   "Q34150585": {
+    "type": "item",
+    "id": "Q34150585",
+    "labels": {
+     "en": {
+      "language": "en",
+      "value": "Phytochemical analysis of a herbal tea from Artemisia annua L."
+     }
+    },
+    "claims": {
+     "P356": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P356",
+        "hash": "63444eef1435efe91487c1778a98a67212cd98c3",
+        "datavalue": {
+         "value": "10.1016/J.JPBA.2012.01.015",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "rank": "normal"
+      }
+     ],
+     "P698": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P698",
+        "hash": "b16a33983d7f2260b6f4823395512f54fbb18552",
+        "datavalue": {
+         "value": "22305080",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "rank": "normal"
+      }
+     ],
+     "P577": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P577",
+        "hash": "811e383790d80db24568ced3f7e4b43007960308",
+        "datavalue": {
+         "value": {
+          "time": "+2012-01-18T00:00:00Z",
+          "timezone": 0,
+          "before": 0,
+          "after": 0,
+          "precision": 11,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+         },
+         "type": "time"
+        },
+        "datatype": "time"
+       },
+       "rank": "normal"
+      }
+     ],
+     "P1476": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P1476",
+        "hash": "ee237e3bc2d954c2f8928b149b751fe96bc32d25",
+        "datavalue": {
+         "value": {
+          "text": "Phytochemical analysis of a herbal tea from Artemisia annua L.",
+          "language": "en"
+         },
+         "type": "monolingualtext"
+        },
+        "datatype": "monolingualtext"
+       },
+       "rank": "normal"
+      }
+     ]
+    }
+   },
+   "Q34384045": {
+    "type": "item",
+    "id": "Q34384045",
+    "labels": {
+     "en": {
+      "language": "en",
+      "value": "Antimalarial activity of Artemisia annua flavonoids from whole plants and cell cultures"
+     }
+    },
+    "claims": {
+     "P356": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P356",
+        "hash": "9ead0cd3a631a2af8b1fe2249cedb3305eed36f1",
+        "datavalue": {
+         "value": "10.1007/BF00236389",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "rank": "normal"
+      }
+     ],
+     "P698": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P698",
+        "hash": "417a1030621a67d0b0b1167c876f98180747d791",
+        "datavalue": {
+         "value": "24213368",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "rank": "normal"
+      }
+     ],
+     "P577": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P577",
+        "hash": "a7a069304c19a9c9c9186a0a140ce35b4517da07",
+        "datavalue": {
+         "value": {
+          "time": "+1992-11-01T00:00:00Z",
+          "timezone": 0,
+          "before": 0,
+          "after": 0,
+          "precision": 11,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+         },
+         "type": "time"
+        },
+        "datatype": "time"
+       },
+       "rank": "normal"
+      },
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P577",
+        "hash": "8ee12f2457f5cbfb843d74b85d3b988ab00e4e2f",
+        "datavalue": {
+         "value": {
+          "time": "+1992-11-01T00:00:00Z",
+          "timezone": 0,
+          "before": 0,
+          "after": 0,
+          "precision": 10,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+         },
+         "type": "time"
+        },
+        "datatype": "time"
+       },
+       "rank": "normal"
+      }
+     ],
+     "P1476": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P1476",
+        "hash": "1cebe28c358537134a3d8c12b5f44148d611f070",
+        "datavalue": {
+         "value": {
+          "text": "Antimalarial activity of Artemisia annua flavonoids from whole plants and cell cultures",
+          "language": "en"
+         },
+         "type": "monolingualtext"
+        },
+        "datatype": "monolingualtext"
+       },
+       "rank": "normal"
+      }
+     ]
+    }
+   },
+   "Q104214488": {
+    "type": "item",
+    "id": "Q104214488",
+    "labels": {
+     "en": {
+      "language": "en",
+      "value": "Exudate flavonoids in species of Artemisia (Asteraceae—Anthemideae): new results and chemosystematic interpretation"
+     }
+    },
+    "claims": {
+     "P356": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P356",
+        "hash": "209c7bccc29bc4b7de7f89e6095e7b3b273e94b8",
+        "datavalue": {
+         "value": "10.1016/S0305-1978(02)00178-3",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "rank": "normal"
+      }
+     ],
+     "P577": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P577",
+        "hash": "f88e8281fc2ae9d2a69861181bb679617f20a601",
+        "datavalue": {
+         "value": {
+          "time": "+2003-05-00T00:00:00Z",
+          "timezone": 0,
+          "before": 0,
+          "after": 0,
+          "precision": 10,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+         },
+         "type": "time"
+        },
+        "datatype": "time"
+       },
+       "rank": "normal"
+      }
+     ],
+     "P1476": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P1476",
+        "hash": "59e0c1bb4e064c89174e1a96152e6b4610d92372",
+        "datavalue": {
+         "value": {
+          "text": "Exudate flavonoids in species of Artemisia (Asteraceae—Anthemideae): new results and chemosystematic interpretation",
+          "language": "en"
+         },
+         "type": "monolingualtext"
+        },
+        "datatype": "monolingualtext"
+       },
+       "rank": "normal"
+      }
+     ]
+    }
+   }
+  },
+  "success": 1
+ }
+}

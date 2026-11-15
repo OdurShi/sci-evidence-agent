@@ -1,0 +1,9 @@
+{
+  "package_version": "0.2.0",
+  "python": "3.12.16",
+  "platform": "macOS-27.2.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "httpx": "0.28.1",
+  "pydantic": "2.14.3",
+  "cpu": "Apple M5"
+}

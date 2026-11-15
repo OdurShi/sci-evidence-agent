@@ -1,0 +1,47 @@
+{
+ "recorded": "2026-11-14",
+ "request": {
+  "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi",
+  "params": {
+   "tool": "sci-evidence-agent",
+   "db": "pubmed",
+   "retmode": "json",
+   "term": "aspirin[notafield]",
+   "retmax": 3,
+   "sort": "relevance"
+  }
+ },
+ "status": 200,
+ "headers": {
+  "content-type": "application/json; charset=UTF-8",
+  "x-ratelimit-limit": "3",
+  "x-ratelimit-remaining": "2"
+ },
+ "body": {
+  "header": {
+   "type": "esearch",
+   "version": "0.3"
+  },
+  "esearchresult": {
+   "count": "80942",
+   "retmax": "3",
+   "retstart": "0",
+   "idlist": [
+    "38839268",
+    "32580960",
+    "34824680"
+   ],
+   "translationset": [
+    {
+     "from": "aspirin",
+     "to": "\"aspirin\"[Supplementary Concept] OR \"aspirin\"[All Fields] OR \"aspirin\"[MeSH Terms] OR \"aspirins\"[All Fields] OR \"aspirin's\"[All Fields] OR \"aspirine\"[All Fields]"
+    }
+   ],
+   "querytranslation": "\"aspirin\"[Supplementary Concept] OR \"aspirin\"[All Fields] OR \"aspirin\"[MeSH Terms] OR \"aspirins\"[All Fields] OR \"aspirin s\"[All Fields] OR \"aspirine\"[All Fields]",
+   "errorlist": {
+    "phrasesnotfound": [],
+    "fieldsnotfound": []
+   }
+  }
+ }
+}

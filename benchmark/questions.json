@@ -1,0 +1,336 @@
+{
+  "name": "sci-evidence-bench",
+  "version": "1.0",
+  "verified_on": "2026-11-14",
+  "description": "34 questions in 5 categories. expected_tools lists the tool calls per round (calls within a round are unordered). expected_statuses lists the result status of each call in the same layout. expected_identifiers are key identifiers that must appear in the answer; they were checked against the live databases on the date above. Literature ranks and LOTUS samples can drift, so identifiers are only listed where the upstream answer is stable or was the top hit on that date.",
+  "questions": [
+    {
+      "id": "C01",
+      "category": "compound",
+      "question": "What are the molecular formula, InChIKey and SMILES of aspirin?",
+      "expected_tools": [["search_compound"]],
+      "expected_statuses": [["ok"]],
+      "expected_identifiers": [
+        {"kind": "cid", "value": "2244"},
+        {"kind": "inchikey", "value": "BSYNRYMUTXBXSQ-UHFFFAOYSA-N"}
+      ]
+    },
+    {
+      "id": "C02",
+      "category": "compound",
+      "question": "Look up PubChem CID 2519 and report its molecular formula and molecular weight.",
+      "expected_tools": [["search_compound"]],
+      "expected_statuses": [["ok"]],
+      "expected_identifiers": [
+        {"kind": "cid", "value": "2519"},
+        {"kind": "inchikey", "value": "RYYVLZVUVIJVGH-UHFFFAOYSA-N"}
+      ]
+    },
+    {
+      "id": "C03",
+      "category": "compound",
+      "question": "查询 ibuprofen 的化合物标识、分子式和结构信息。",
+      "expected_tools": [["search_compound"]],
+      "expected_statuses": [["ok"]],
+      "expected_identifiers": [
+        {"kind": "cid", "value": "3672"},
+        {"kind": "inchikey", "value": "HEFNNWSXXWATRW-UHFFFAOYSA-N"}
+      ]
+    },
+    {
+      "id": "C04",
+      "category": "compound",
+      "question": "Give me the PubChem compound record for acetylsalicylic acid (identifier, formula, molecular weight).",
+      "expected_tools": [["search_compound"]],
+      "expected_statuses": [["ok"]],
+      "expected_identifiers": [
+        {"kind": "cid", "value": "2244"},
+        {"kind": "inchikey", "value": "BSYNRYMUTXBXSQ-UHFFFAOYSA-N"}
+      ]
+    },
+    {
+      "id": "C05",
+      "category": "compound",
+      "question": "What is the molecular formula of zzzznotacompound?",
+      "expected_tools": [["search_compound"]],
+      "expected_statuses": [["no_match"]],
+      "expected_identifiers": [],
+      "note": "Nonsense name: PubChem answers HTTP 404 (PUGREST.NotFound)."
+    },
+    {
+      "id": "C06",
+      "category": "compound",
+      "question": "Find the PubChem compound record for stearate.",
+      "expected_tools": [["search_compound"]],
+      "expected_statuses": [["ambiguous"]],
+      "expected_identifiers": [
+        {"kind": "cid", "value": "3033836"},
+        {"kind": "cid", "value": "5281"}
+      ],
+      "note": "The name resolves to two CIDs (the anion and stearic acid)."
+    },
+    {
+      "id": "B01",
+      "category": "bioactivity_chain",
+      "question": "List bioactivity assay records for aspirin from ChEMBL, keeping assay type, value and units.",
+      "expected_tools": [["search_chembl_molecule"], ["get_bioactivities"]],
+      "expected_statuses": [["ok"], ["ok"]],
+      "expected_identifiers": [{"kind": "chembl", "value": "CHEMBL25"}]
+    },
+    {
+      "id": "B02",
+      "category": "bioactivity_chain",
+      "question": "Get the bioactivities recorded in ChEMBL for CHEMBL941.",
+      "expected_tools": [["get_bioactivities"]],
+      "expected_statuses": [["ok"]],
+      "expected_identifiers": [{"kind": "chembl", "value": "CHEMBL941"}],
+      "note": "The ChEMBL ID is given, so the search step must be skipped."
+    },
+    {
+      "id": "B03",
+      "category": "bioactivity_chain",
+      "question": "在 ChEMBL 中检索 caffeine，列出最多 10 条活性实验记录，保留实验类型、数值和单位。",
+      "expected_tools": [["search_chembl_molecule"], ["get_bioactivities"]],
+      "expected_statuses": [["ok"], ["ok"]],
+      "expected_identifiers": [{"kind": "chembl", "value": "CHEMBL113"}]
+    },
+    {
+      "id": "B04",
+      "category": "bioactivity_chain",
+      "question": "Which IC50 or Ki assay results does ChEMBL hold for ibuprofen?",
+      "expected_tools": [["search_chembl_molecule"], ["get_bioactivities"]],
+      "expected_statuses": [["ok"], ["ok"]],
+      "expected_identifiers": [{"kind": "chembl", "value": "CHEMBL521"}]
+    },
+    {
+      "id": "B05",
+      "category": "bioactivity_chain",
+      "question": "Show ChEMBL bioactivity data for paracetamol.",
+      "expected_tools": [["search_chembl_molecule"]],
+      "expected_statuses": [["ambiguous"]],
+      "expected_identifiers": [{"kind": "chembl", "value": "CHEMBL112"}],
+      "note": "ChEMBL's preferred name is ACETAMINOPHEN, so the search returns several candidates without an exact name match. The chain must stop and list them instead of picking one."
+    },
+    {
+      "id": "B06",
+      "category": "bioactivity_chain",
+      "question": "Show ChEMBL bioactivity assay data for zzzznotacompound.",
+      "expected_tools": [["search_chembl_molecule"]],
+      "expected_statuses": [["no_match"]],
+      "expected_identifiers": [],
+      "note": "No molecule, so no second step."
+    },
+    {
+      "id": "B07",
+      "category": "bioactivity_chain",
+      "question": "Get ChEMBL bioactivity records for CHEMBL99999999.",
+      "expected_tools": [["get_bioactivities"]],
+      "expected_statuses": [["no_match"]],
+      "expected_identifiers": [],
+      "note": "Well-formed but non-existent ChEMBL ID."
+    },
+    {
+      "id": "P01",
+      "category": "protein",
+      "question": "Find the UniProt entry for human EGFR: protein name, gene names and organism.",
+      "expected_tools": [["search_protein"]],
+      "expected_statuses": [["ok"]],
+      "expected_identifiers": [{"kind": "uniprot", "value": "P00533"}]
+    },
+    {
+      "id": "P02",
+      "category": "protein",
+      "question": "查询人类 PTGS1 的 UniProt 条目，返回蛋白名称、基因名称、物种和来源。",
+      "expected_tools": [["search_protein"]],
+      "expected_statuses": [["ok"]],
+      "expected_identifiers": [{"kind": "uniprot", "value": "P23219"}]
+    },
+    {
+      "id": "P03",
+      "category": "protein",
+      "question": "Retrieve UniProt accession P04637 and report the protein name and sequence length.",
+      "expected_tools": [["search_protein"]],
+      "expected_statuses": [["ok"]],
+      "expected_identifiers": [{"kind": "uniprot", "value": "P04637"}]
+    },
+    {
+      "id": "P04",
+      "category": "protein",
+      "question": "What is the UniProt entry for the mouse gene Trp53?",
+      "expected_tools": [["search_protein"]],
+      "expected_statuses": [["ok"]],
+      "expected_identifiers": [{"kind": "uniprot", "value": "P02340"}],
+      "note": "Needs the organism filter 10090 instead of the human default."
+    },
+    {
+      "id": "P05",
+      "category": "protein",
+      "question": "Find the UniProt protein entry for the human gene ZZZNOTAGENE.",
+      "expected_tools": [["search_protein"]],
+      "expected_statuses": [["no_match"]],
+      "expected_identifiers": []
+    },
+    {
+      "id": "P06",
+      "category": "protein",
+      "question": "Which UniProt entries match the gene symbol EGFR across all species?",
+      "expected_tools": [["search_protein"]],
+      "expected_statuses": [["ambiguous"]],
+      "expected_identifiers": [
+        {"kind": "uniprot", "value": "P00533"},
+        {"kind": "uniprot", "value": "Q01279"}
+      ],
+      "note": "Without an organism filter the gene symbol matches orthologues in several species."
+    },
+    {
+      "id": "P07",
+      "category": "protein",
+      "question": "Search UniProt for the protein \"kinase: human\".",
+      "expected_tools": [["search_protein"]],
+      "expected_statuses": [["error"]],
+      "expected_identifiers": [],
+      "note": "The colon makes UniProt read 'kinase' as a search field and answer HTTP 400. The answer must report a failed request, not 'no data'."
+    },
+    {
+      "id": "L01",
+      "category": "literature",
+      "question": "Fetch the PubMed record for PMID 14592543 with its DOI.",
+      "expected_tools": [["get_article"]],
+      "expected_statuses": [["ok"]],
+      "expected_identifiers": [
+        {"kind": "pmid", "value": "14592543"},
+        {"kind": "doi", "value": "10.1016/s0049-3848(03)00379-7"}
+      ]
+    },
+    {
+      "id": "L02",
+      "category": "literature",
+      "question": "Find the paper titled \"Highly accurate protein structure prediction with AlphaFold\" in PubMed.",
+      "expected_tools": [["search_literature"]],
+      "expected_statuses": [["ok"]],
+      "expected_identifiers": [
+        {"kind": "pmid", "value": "34265844"},
+        {"kind": "doi", "value": "10.1038/s41586-021-03819-2"}
+      ]
+    },
+    {
+      "id": "L03",
+      "category": "literature",
+      "question": "检索 aspirin 与 cyclooxygenase 相关的文献，列出 5 篇，带 PMID 和 DOI。",
+      "expected_tools": [["search_literature"]],
+      "expected_statuses": [["ok"]],
+      "expected_identifiers": [{"kind": "pmid", "value": "14592543"}],
+      "note": "PMID 14592543 was the top relevance hit for 'aspirin AND cyclooxygenase' on the verification date; relevance ranking can drift."
+    },
+    {
+      "id": "L04",
+      "category": "literature",
+      "question": "Which PubMed record has the DOI 10.1016/j.cell.2011.02.013?",
+      "expected_tools": [["search_literature"]],
+      "expected_statuses": [["ok"]],
+      "expected_identifiers": [
+        {"kind": "pmid", "value": "21376230"},
+        {"kind": "doi", "value": "10.1016/j.cell.2011.02.013"}
+      ]
+    },
+    {
+      "id": "L05",
+      "category": "literature",
+      "question": "Retrieve the PubMed article with PMID 999999999.",
+      "expected_tools": [["get_article"]],
+      "expected_statuses": [["no_match"]],
+      "expected_identifiers": [],
+      "note": "PubMed answers HTTP 200 with an error field inside the record."
+    },
+    {
+      "id": "L06",
+      "category": "literature",
+      "question": "Search PubMed for papers about zzzznotarealquery12345.",
+      "expected_tools": [["search_literature"]],
+      "expected_statuses": [["no_match"]],
+      "expected_identifiers": []
+    },
+    {
+      "id": "L07",
+      "category": "literature",
+      "question": "Fetch the PubMed articles PMID 34265844 and PMID 5284360 and give their DOIs.",
+      "expected_tools": [["get_article", "get_article"]],
+      "expected_statuses": [["ok", "ok"]],
+      "expected_identifiers": [
+        {"kind": "pmid", "value": "34265844"},
+        {"kind": "doi", "value": "10.1038/s41586-021-03819-2"},
+        {"kind": "pmid", "value": "5284360"},
+        {"kind": "doi", "value": "10.1038/newbio231232a0"}
+      ],
+      "note": "Two independent calls in one round."
+    },
+    {
+      "id": "X01",
+      "category": "cross_source",
+      "question": "分别查询 aspirin 的化学信息、人类 PTGS1 的蛋白信息，以及相关文献，按数据库整理结果并附来源。",
+      "expected_tools": [["search_compound", "search_protein", "search_literature"]],
+      "expected_statuses": [["ok", "ok", "ok"]],
+      "expected_identifiers": [
+        {"kind": "cid", "value": "2244"},
+        {"kind": "uniprot", "value": "P23219"}
+      ]
+    },
+    {
+      "id": "X02",
+      "category": "cross_source",
+      "question": "Give me the PubChem record for imatinib and its ChEMBL bioactivity data.",
+      "expected_tools": [["search_compound", "search_chembl_molecule"], ["get_bioactivities"]],
+      "expected_statuses": [["ok", "ok"], ["ok"]],
+      "expected_identifiers": [
+        {"kind": "cid", "value": "5291"},
+        {"kind": "chembl", "value": "CHEMBL941"}
+      ]
+    },
+    {
+      "id": "X03",
+      "category": "cross_source",
+      "question": "For the human gene TP53, return the UniProt protein entry and related PubMed literature.",
+      "expected_tools": [["search_protein", "search_literature"]],
+      "expected_statuses": [["ok", "ok"]],
+      "expected_identifiers": [{"kind": "uniprot", "value": "P04637"}]
+    },
+    {
+      "id": "X04",
+      "category": "cross_source",
+      "question": "Which natural products have been reported in Artemisia annua? Include literature references.",
+      "expected_tools": [["search_by_taxon"]],
+      "expected_statuses": [["ok"]],
+      "expected_identifiers": [],
+      "note": "LOTUS already carries the references, so no separate PubMed search is expected. The SPARQL sample is unordered upstream, so no specific compound is required."
+    },
+    {
+      "id": "X05",
+      "category": "cross_source",
+      "question": "In which species has the natural product with InChIKey BLUAFEHZUWYNDE-NNWCWBAJSA-N been found?",
+      "expected_tools": [["search_occurrences"]],
+      "expected_statuses": [["ok"]],
+      "expected_identifiers": [{"kind": "inchikey", "value": "BLUAFEHZUWYNDE-NNWCWBAJSA-N"}]
+    },
+    {
+      "id": "X06",
+      "category": "cross_source",
+      "question": "Where does artemisinin occur in nature? Look up the compound in PubChem and list the species it has been found in.",
+      "expected_tools": [["search_compound"], ["search_occurrences"]],
+      "expected_statuses": [["ok"], ["ok"]],
+      "expected_identifiers": [
+        {"kind": "cid", "value": "68827"},
+        {"kind": "inchikey", "value": "BLUAFEHZUWYNDE-NNWCWBAJSA-N"}
+      ],
+      "note": "Chain across two sources: the InChIKey from PubChem is passed to LOTUS."
+    },
+    {
+      "id": "X07",
+      "category": "cross_source",
+      "question": "Get the PubChem compound record for caffeine and search UniProt for the protein \"adenosine receptor: A2a\".",
+      "expected_tools": [["search_compound", "search_protein"]],
+      "expected_statuses": [["ok", "error"]],
+      "expected_identifiers": [{"kind": "cid", "value": "2519"}],
+      "note": "Partial failure: the UniProt query is rejected with HTTP 400 while the PubChem lookup succeeds. Both outcomes must be reported."
+    }
+  ]
+}

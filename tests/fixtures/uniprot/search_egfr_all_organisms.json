@@ -1,0 +1,130 @@
+{
+ "recorded": "2026-11-14",
+ "request": {
+  "url": "https://rest.uniprot.org/uniprotkb/search",
+  "params": {
+   "query": "(gene:EGFR) AND reviewed:true",
+   "fields": "accession,protein_name,gene_names,organism_name,organism_id,length,reviewed",
+   "format": "json",
+   "size": 3
+  }
+ },
+ "status": 200,
+ "headers": {
+  "content-type": "application/json",
+  "x-uniprot-release": "2026_04",
+  "x-total-results": "6",
+  "x-uniprot-release-date": "04-November-2026"
+ },
+ "body": {
+  "results": [
+   {
+    "entryType": "UniProtKB reviewed (Swiss-Prot)",
+    "primaryAccession": "P00533",
+    "organism": {
+     "scientificName": "Homo sapiens",
+     "commonName": "Human",
+     "taxonId": 9606
+    },
+    "proteinDescription": {
+     "recommendedName": {
+      "fullName": {
+       "evidences": [
+        {
+         "evidenceCode": "ECO:0000305"
+        }
+       ],
+       "value": "Epidermal growth factor receptor"
+      }
+     }
+    },
+    "genes": [
+     {
+      "geneName": {
+       "evidences": [
+        {
+         "evidenceCode": "ECO:0000303",
+         "source": "PubMed",
+         "id": "32926474"
+        },
+        {
+         "evidenceCode": "ECO:0000312",
+         "source": "HGNC",
+         "id": "HGNC:3236"
+        }
+       ],
+       "value": "EGFR"
+      }
+     }
+    ],
+    "sequence": {
+     "length": 1210
+    }
+   },
+   {
+    "entryType": "UniProtKB reviewed (Swiss-Prot)",
+    "primaryAccession": "Q01279",
+    "organism": {
+     "scientificName": "Mus musculus",
+     "commonName": "Mouse",
+     "taxonId": 10090
+    },
+    "proteinDescription": {
+     "recommendedName": {
+      "fullName": {
+       "evidences": [
+        {
+         "evidenceCode": "ECO:0000305"
+        }
+       ],
+       "value": "Epidermal growth factor receptor"
+      }
+     }
+    },
+    "genes": [
+     {
+      "geneName": {
+       "evidences": [
+        {
+         "evidenceCode": "ECO:0000312",
+         "source": "MGI",
+         "id": "MGI:95294"
+        }
+       ],
+       "value": "Egfr"
+      }
+     }
+    ],
+    "sequence": {
+     "length": 1210
+    }
+   },
+   {
+    "entryType": "UniProtKB reviewed (Swiss-Prot)",
+    "primaryAccession": "P55245",
+    "organism": {
+     "scientificName": "Macaca mulatta",
+     "commonName": "Rhesus macaque",
+     "taxonId": 9544
+    },
+    "proteinDescription": {
+     "recommendedName": {
+      "fullName": {
+       "value": "Epidermal growth factor receptor"
+      }
+     }
+    },
+    "genes": [
+     {
+      "geneName": {
+       "value": "EGFR"
+      }
+     }
+    ],
+    "sequence": {
+     "length": 1210
+    }
+   }
+  ]
+ }
+}

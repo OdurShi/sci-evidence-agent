@@ -1,0 +1,1041 @@
+{
+  "benchmark": {
+    "name": "sci-evidence-bench",
+    "version": "1.0",
+    "verified_on": "2026-11-14",
+    "path": "benchmark/questions.json",
+    "n_questions": 34
+  },
+  "provider": "offline",
+  "mode": "live",
+  "started_utc": "2026-11-14T22:47:04+00:00",
+  "finished_utc": "2026-11-14T22:49:39+00:00",
+  "runtime_s": 154.8,
+  "pass_runtime_s": {
+    "pass1_cold": 152.3,
+    "pass2_warm": 1.4
+  },
+  "http_requests": {
+    "pass1_cold": 53,
+    "pass2_warm": 2
+  },
+  "environment": {
+    "package_version": "0.2.0",
+    "python": "3.12.16",
+    "platform": "macOS-27.2.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "httpx": "0.28.1",
+    "pydantic": "2.14.3",
+    "cpu": "Apple M5"
+  },
+  "passes": {
+    "pass1_cold": {
+      "per_category": {
+        "compound": {
+          "n": 6,
+          "tool_selection_exact": 1.0,
+          "tool_precision": 1.0,
+          "tool_recall": 1.0,
+          "status_match": 1.0,
+          "identifiers_expected": 10,
+          "identifiers_found": 10,
+          "identifier_recall": 1.0,
+          "answer_identifiers": 12,
+          "traceable": 12,
+          "echoed": 0,
+          "untraceable": 0,
+          "traceable_share": 1.0,
+          "possible_pmids_untraced": 0,
+          "non_ok_questions": 2,
+          "non_ok_handled": 2,
+          "handling": 1.0,
+          "fabrication_detected": 1.0,
+          "latency_median_s": 0.424,
+          "latency_p90_s": 0.716,
+          "latency_mean_s": 0.468,
+          "tool_calls": 6,
+          "cache_hits": 0,
+          "cache_hit_rate": 0.0,
+          "run_errors": 0
+        },
+        "bioactivity_chain": {
+          "n": 7,
+          "tool_selection_exact": 1.0,
+          "tool_precision": 1.0,
+          "tool_recall": 1.0,
+          "status_match": 1.0,
+          "identifiers_expected": 5,
+          "identifiers_found": 5,
+          "identifier_recall": 1.0,
+          "answer_identifiers": 100,
+          "traceable": 99,
+          "echoed": 1,
+          "untraceable": 0,
+          "traceable_share": 0.99,
+          "possible_pmids_untraced": 0,
+          "non_ok_questions": 3,
+          "non_ok_handled": 3,
+          "handling": 1.0,
+          "fabrication_detected": 1.0,
+          "latency_median_s": 0.595,
+          "latency_p90_s": 1.107,
+          "latency_mean_s": 0.635,
+          "tool_calls": 10,
+          "cache_hits": 0,
+          "cache_hit_rate": 0.0,
+          "run_errors": 0
+        },
+        "protein": {
+          "n": 7,
+          "tool_selection_exact": 1.0,
+          "tool_precision": 1.0,
+          "tool_recall": 1.0,
+          "status_match": 1.0,
+          "identifiers_expected": 6,
+          "identifiers_found": 6,
+          "identifier_recall": 1.0,
+          "answer_identifiers": 9,
+          "traceable": 9,
+          "echoed": 0,
+          "untraceable": 0,
+          "traceable_share": 1.0,
+          "possible_pmids_untraced": 0,
+          "non_ok_questions": 3,
+          "non_ok_handled": 3,
+          "handling": 1.0,
+          "fabrication_detected": 1.0,
+          "latency_median_s": 0.172,
+          "latency_p90_s": 0.707,
+          "latency_mean_s": 0.324,
+          "tool_calls": 7,
+          "cache_hits": 0,
+          "cache_hit_rate": 0.0,
+          "run_errors": 0
+        },
+        "literature": {
+          "n": 7,
+          "tool_selection_exact": 1.0,
+          "tool_precision": 1.0,
+          "tool_recall": 1.0,
+          "status_match": 1.0,
+          "identifiers_expected": 11,
+          "identifiers_found": 11,
+          "identifier_recall": 1.0,
+          "answer_identifiers": 29,
+          "traceable": 28,
+          "echoed": 1,
+          "untraceable": 0,
+          "traceable_share": 0.9655,
+          "possible_pmids_untraced": 0,
+          "non_ok_questions": 2,
+          "non_ok_handled": 2,
+          "handling": 1.0,
+          "fabrication_detected": 1.0,
+          "latency_median_s": 1.162,
+          "latency_p90_s": 1.417,
+          "latency_mean_s": 0.95,
+          "tool_calls": 8,
+          "cache_hits": 0,
+          "cache_hit_rate": 0.0,
+          "run_errors": 0
+        },
+        "cross_source": {
+          "n": 7,
+          "tool_selection_exact": 1.0,
+          "tool_precision": 1.0,
+          "tool_recall": 1.0,
+          "status_match": 1.0,
+          "identifiers_expected": 9,
+          "identifiers_found": 9,
+          "identifier_recall": 1.0,
+          "answer_identifiers": 84,
+          "traceable": 84,
+          "echoed": 0,
+          "untraceable": 0,
+          "traceable_share": 1.0,
+          "possible_pmids_untraced": 0,
+          "non_ok_questions": 1,
+          "non_ok_handled": 1,
+          "handling": 1.0,
+          "fabrication_detected": 1.0,
+          "latency_median_s": 2.016,
+          "latency_p90_s": 64.117,
+          "latency_mean_s": 19.445,
+          "tool_calls": 14,
+          "cache_hits": 0,
+          "cache_hit_rate": 0.0,
+          "run_errors": 0
+        }
+      },
+      "overall": {
+        "n": 34,
+        "tool_selection_exact": 1.0,
+        "tool_precision": 1.0,
+        "tool_recall": 1.0,
+        "status_match": 1.0,
+        "identifiers_expected": 41,
+        "identifiers_found": 41,
+        "identifier_recall": 1.0,
+        "answer_identifiers": 234,
+        "traceable": 232,
+        "echoed": 2,
+        "untraceable": 0,
+        "traceable_share": 0.9915,
+        "possible_pmids_untraced": 0,
+        "non_ok_questions": 11,
+        "non_ok_handled": 11,
+        "handling": 1.0,
+        "fabrication_detected": 1.0,
+        "latency_median_s": 0.686,
+        "latency_p90_s": 1.919,
+        "latency_mean_s": 4.479,
+        "tool_calls": 45,
+        "cache_hits": 0,
+        "cache_hit_rate": 0.0,
+        "run_errors": 0
+      }
+    },
+    "pass2_warm": {
+      "per_category": {
+        "compound": {
+          "n": 6,
+          "tool_selection_exact": 1.0,
+          "tool_precision": 1.0,
+          "tool_recall": 1.0,
+          "status_match": 1.0,
+          "identifiers_expected": 10,
+          "identifiers_found": 10,
+          "identifier_recall": 1.0,
+          "answer_identifiers": 12,
+          "traceable": 12,
+          "echoed": 0,
+          "untraceable": 0,
+          "traceable_share": 1.0,
+          "possible_pmids_untraced": 0,
+          "non_ok_questions": 2,
+          "non_ok_handled": 2,
+          "handling": 1.0,
+          "fabrication_detected": 1.0,
+          "latency_median_s": 0.003,
+          "latency_p90_s": 0.004,
+          "latency_mean_s": 0.003,
+          "tool_calls": 6,
+          "cache_hits": 6,
+          "cache_hit_rate": 1.0,
+          "run_errors": 0
+        },
+        "bioactivity_chain": {
+          "n": 7,
+          "tool_selection_exact": 1.0,
+          "tool_precision": 1.0,
+          "tool_recall": 1.0,
+          "status_match": 1.0,
+          "identifiers_expected": 5,
+          "identifiers_found": 5,
+          "identifier_recall": 1.0,
+          "answer_identifiers": 100,
+          "traceable": 99,
+          "echoed": 1,
+          "untraceable": 0,
+          "traceable_share": 0.99,
+          "possible_pmids_untraced": 0,
+          "non_ok_questions": 3,
+          "non_ok_handled": 3,
+          "handling": 1.0,
+          "fabrication_detected": 1.0,
+          "latency_median_s": 0.004,
+          "latency_p90_s": 0.005,
+          "latency_mean_s": 0.004,
+          "tool_calls": 10,
+          "cache_hits": 10,
+          "cache_hit_rate": 1.0,
+          "run_errors": 0
+        },
+        "protein": {
+          "n": 7,
+          "tool_selection_exact": 1.0,
+          "tool_precision": 1.0,
+          "tool_recall": 1.0,
+          "status_match": 1.0,
+          "identifiers_expected": 6,
+          "identifiers_found": 6,
+          "identifier_recall": 1.0,
+          "answer_identifiers": 9,
+          "traceable": 9,
+          "echoed": 0,
+          "untraceable": 0,
+          "traceable_share": 1.0,
+          "possible_pmids_untraced": 0,
+          "non_ok_questions": 3,
+          "non_ok_handled": 3,
+          "handling": 1.0,
+          "fabrication_detected": 1.0,
+          "latency_median_s": 0.003,
+          "latency_p90_s": 0.266,
+          "latency_mean_s": 0.097,
+          "tool_calls": 7,
+          "cache_hits": 6,
+          "cache_hit_rate": 0.8571,
+          "run_errors": 0
+        },
+        "literature": {
+          "n": 7,
+          "tool_selection_exact": 1.0,
+          "tool_precision": 1.0,
+          "tool_recall": 1.0,
+          "status_match": 1.0,
+          "identifiers_expected": 11,
+          "identifiers_found": 11,
+          "identifier_recall": 1.0,
+          "answer_identifiers": 29,
+          "traceable": 28,
+          "echoed": 1,
+          "untraceable": 0,
+          "traceable_share": 0.9655,
+          "possible_pmids_untraced": 0,
+          "non_ok_questions": 2,
+          "non_ok_handled": 2,
+          "handling": 1.0,
+          "fabrication_detected": 1.0,
+          "latency_median_s": 0.003,
+          "latency_p90_s": 0.004,
+          "latency_mean_s": 0.003,
+          "tool_calls": 8,
+          "cache_hits": 8,
+          "cache_hit_rate": 1.0,
+          "run_errors": 0
+        },
+        "cross_source": {
+          "n": 7,
+          "tool_selection_exact": 1.0,
+          "tool_precision": 1.0,
+          "tool_recall": 1.0,
+          "status_match": 1.0,
+          "identifiers_expected": 9,
+          "identifiers_found": 9,
+          "identifier_recall": 1.0,
+          "answer_identifiers": 84,
+          "traceable": 84,
+          "echoed": 0,
+          "untraceable": 0,
+          "traceable_share": 1.0,
+          "possible_pmids_untraced": 0,
+          "non_ok_questions": 1,
+          "non_ok_handled": 1,
+          "handling": 1.0,
+          "fabrication_detected": 1.0,
+          "latency_median_s": 0.006,
+          "latency_p90_s": 0.27,
+          "latency_mean_s": 0.099,
+          "tool_calls": 14,
+          "cache_hits": 13,
+          "cache_hit_rate": 0.9286,
+          "run_errors": 0
+        }
+      },
+      "overall": {
+        "n": 34,
+        "tool_selection_exact": 1.0,
+        "tool_precision": 1.0,
+        "tool_recall": 1.0,
+        "status_match": 1.0,
+        "identifiers_expected": 41,
+        "identifiers_found": 41,
+        "identifier_recall": 1.0,
+        "answer_identifiers": 234,
+        "traceable": 232,
+        "echoed": 2,
+        "untraceable": 0,
+        "traceable_share": 0.9915,
+        "possible_pmids_untraced": 0,
+        "non_ok_questions": 11,
+        "non_ok_handled": 11,
+        "handling": 1.0,
+        "fabrication_detected": 1.0,
+        "latency_median_s": 0.003,
+        "latency_p90_s": 0.006,
+        "latency_mean_s": 0.042,
+        "tool_calls": 45,
+        "cache_hits": 43,
+        "cache_hit_rate": 0.9556,
+        "run_errors": 0
+      }
+    }
+  },
+  "answers_identical_across_passes": 34,
+  "heldout_planning": {
+    "n": 20,
+    "exact": 18,
+    "accuracy": 0.9,
+    "arguments_exact": 10,
+    "arguments_accuracy": 0.5,
+    "per_category": {
+      "compound": {
+        "n": 5,
+        "exact": 4,
+        "arguments_exact": 2
+      },
+      "bioactivity_chain": {
+        "n": 3,
+        "exact": 3,
+        "arguments_exact": 1
+      },
+      "protein": {
+        "n": 3,
+        "exact": 3,
+        "arguments_exact": 2
+      },
+      "literature": {
+        "n": 4,
+        "exact": 3,
+        "arguments_exact": 2
+      },
+      "cross_source": {
+        "n": 5,
+        "exact": 5,
+        "arguments_exact": 3
+      }
+    },
+    "questions": [
+      {
+        "id": "H01",
+        "category": "compound",
+        "question": "I need the SMILES string for ibuprofen.",
+        "expected_tools": [
+          [
+            "search_compound"
+          ]
+        ],
+        "planned_tools": [
+          [
+            "search_compound"
+          ]
+        ],
+        "planned_arguments": [
+          [
+            {
+              "query": "string",
+              "limit": 5
+            }
+          ]
+        ],
+        "exact": true,
+        "arguments_exact": false,
+        "recognised": [
+          "string",
+          "ibuprofen"
+        ]
+      },
+      {
+        "id": "H02",
+        "category": "compound",
+        "question": "Can you tell me how much caffeine weighs (molecular weight)?",
+        "expected_tools": [
+          [
+            "search_compound"
+          ]
+        ],
+        "planned_tools": [
+          [
+            "search_compound"
+          ]
+        ],
+        "planned_arguments": [
+          [
+            {
+              "query": "caffeine weighs",
+              "limit": 5
+            }
+          ]
+        ],
+        "exact": true,
+        "arguments_exact": false,
+        "recognised": [
+          "caffeine weighs"
+        ]
+      },
+      {
+        "id": "H03",
+        "category": "compound",
+        "question": "PubChem entry for vitamin C please",
+        "expected_tools": [
+          [
+            "search_compound"
+          ]
+        ],
+        "planned_tools": [
+          [
+            "search_compound"
+          ]
+        ],
+        "planned_arguments": [
+          [
+            {
+              "query": "vitamin C",
+              "limit": 5
+            }
+          ]
+        ],
+        "exact": true,
+        "arguments_exact": true,
+        "recognised": [
+          "vitamin C"
+        ]
+      },
+      {
+        "id": "H04",
+        "category": "compound",
+        "question": "Molecular formula for CID 3672?",
+        "expected_tools": [
+          [
+            "search_compound"
+          ]
+        ],
+        "planned_tools": [
+          [
+            "search_compound"
+          ]
+        ],
+        "planned_arguments": [
+          [
+            {
+              "query": "3672",
+              "limit": 5
+            }
+          ]
+        ],
+        "exact": true,
+        "arguments_exact": true,
+        "recognised": [
+          "CID 3672"
+        ]
+      },
+      {
+        "id": "H05",
+        "category": "compound",
+        "question": "阿司匹林的分子式是什么？",
+        "expected_tools": [
+          [
+            "search_compound"
+          ]
+        ],
+        "planned_tools": [],
+        "planned_arguments": [],
+        "exact": false,
+        "arguments_exact": false,
+        "recognised": []
+      },
+      {
+        "id": "H06",
+        "category": "bioactivity_chain",
+        "question": "How potent is imatinib? Show its IC50 measurements from ChEMBL.",
+        "expected_tools": [
+          [
+            "search_chembl_molecule"
+          ],
+          [
+            "get_bioactivities"
+          ]
+        ],
+        "planned_tools": [
+          [
+            "search_chembl_molecule"
+          ],
+          [
+            "get_bioactivities"
+          ]
+        ],
+        "planned_arguments": [
+          [
+            {
+              "query": "potent",
+              "limit": 5
+            }
+          ],
+          [
+            {
+              "limit": 10
+            }
+          ]
+        ],
+        "exact": true,
+        "arguments_exact": false,
+        "recognised": [
+          "potent",
+          "imatinib"
+        ]
+      },
+      {
+        "id": "H07",
+        "category": "bioactivity_chain",
+        "question": "Assay results for CHEMBL521",
+        "expected_tools": [
+          [
+            "get_bioactivities"
+          ]
+        ],
+        "planned_tools": [
+          [
+            "get_bioactivities"
+          ]
+        ],
+        "planned_arguments": [
+          [
+            {
+              "chembl_id": "CHEMBL521",
+              "limit": 10
+            }
+          ]
+        ],
+        "exact": true,
+        "arguments_exact": true,
+        "recognised": [
+          "CHEMBL521"
+        ]
+      },
+      {
+        "id": "H08",
+        "category": "bioactivity_chain",
+        "question": "What does ChEMBL know about the activity of metformin against its targets?",
+        "expected_tools": [
+          [
+            "search_chembl_molecule"
+          ],
+          [
+            "get_bioactivities"
+          ]
+        ],
+        "planned_tools": [
+          [
+            "search_chembl_molecule"
+          ],
+          [
+            "get_bioactivities"
+          ]
+        ],
+        "planned_arguments": [
+          [
+            {
+              "query": "metformin against",
+              "limit": 5
+            }
+          ],
+          [
+            {
+              "limit": 10
+            }
+          ]
+        ],
+        "exact": true,
+        "arguments_exact": false,
+        "recognised": [
+          "metformin against"
+        ]
+      },
+      {
+        "id": "H09",
+        "category": "protein",
+        "question": "Which protein does the human gene BRCA1 encode? Give the UniProt accession.",
+        "expected_tools": [
+          [
+            "search_protein"
+          ]
+        ],
+        "planned_tools": [
+          [
+            "search_protein"
+          ]
+        ],
+        "planned_arguments": [
+          [
+            {
+              "query": "BRCA1 encode",
+              "organism_id": 9606,
+              "reviewed_only": true,
+              "limit": 5
+            }
+          ]
+        ],
+        "exact": true,
+        "arguments_exact": false,
+        "recognised": [
+          "BRCA1 encode"
+        ]
+      },
+      {
+        "id": "H10",
+        "category": "protein",
+        "question": "UniProt record for rat insulin",
+        "expected_tools": [
+          [
+            "search_protein"
+          ]
+        ],
+        "planned_tools": [
+          [
+            "search_protein"
+          ]
+        ],
+        "planned_arguments": [
+          [
+            {
+              "query": "insulin",
+              "organism_id": 10116,
+              "reviewed_only": true,
+              "limit": 5
+            }
+          ]
+        ],
+        "exact": true,
+        "arguments_exact": true,
+        "recognised": [
+          "insulin"
+        ]
+      },
+      {
+        "id": "H11",
+        "category": "protein",
+        "question": "Tell me about UniProt entry Q9BYF1.",
+        "expected_tools": [
+          [
+            "search_protein"
+          ]
+        ],
+        "planned_tools": [
+          [
+            "search_protein"
+          ]
+        ],
+        "planned_arguments": [
+          [
+            {
+              "query": "Q9BYF1",
+              "organism_id": null,
+              "reviewed_only": true,
+              "limit": 5
+            }
+          ]
+        ],
+        "exact": true,
+        "arguments_exact": true,
+        "recognised": [
+          "Q9BYF1"
+        ]
+      },
+      {
+        "id": "H12",
+        "category": "literature",
+        "question": "Recent papers on CRISPR base editing",
+        "expected_tools": [
+          [
+            "search_literature"
+          ]
+        ],
+        "planned_tools": [
+          [
+            "search_literature"
+          ]
+        ],
+        "planned_arguments": [
+          [
+            {
+              "term": "CRISPR base editing",
+              "limit": 5,
+              "sort": "relevance"
+            }
+          ]
+        ],
+        "exact": true,
+        "arguments_exact": true,
+        "recognised": [
+          "CRISPR base editing"
+        ]
+      },
+      {
+        "id": "H13",
+        "category": "literature",
+        "question": "Pull up PubMed ID 21376230.",
+        "expected_tools": [
+          [
+            "get_article"
+          ]
+        ],
+        "planned_tools": [
+          [
+            "search_literature"
+          ]
+        ],
+        "planned_arguments": [
+          [
+            {
+              "term": "Pull",
+              "limit": 5,
+              "sort": "relevance"
+            }
+          ]
+        ],
+        "exact": false,
+        "arguments_exact": false,
+        "recognised": [
+          "Pull"
+        ]
+      },
+      {
+        "id": "H14",
+        "category": "literature",
+        "question": "Any publications linking metformin to longevity?",
+        "expected_tools": [
+          [
+            "search_literature"
+          ]
+        ],
+        "planned_tools": [
+          [
+            "search_literature"
+          ]
+        ],
+        "planned_arguments": [
+          [
+            {
+              "term": "linking metformin AND longevity",
+              "limit": 5,
+              "sort": "relevance"
+            }
+          ]
+        ],
+        "exact": true,
+        "arguments_exact": false,
+        "recognised": [
+          "linking metformin",
+          "longevity"
+        ]
+      },
+      {
+        "id": "H15",
+        "category": "literature",
+        "question": "Get the DOI for the article with PMID 5284360",
+        "expected_tools": [
+          [
+            "get_article"
+          ]
+        ],
+        "planned_tools": [
+          [
+            "get_article"
+          ]
+        ],
+        "planned_arguments": [
+          [
+            {
+              "pmid": "5284360"
+            }
+          ]
+        ],
+        "exact": true,
+        "arguments_exact": true,
+        "recognised": [
+          "PMID 5284360"
+        ]
+      },
+      {
+        "id": "H16",
+        "category": "cross_source",
+        "question": "What compounds are found in Panax ginseng?",
+        "expected_tools": [
+          [
+            "search_by_taxon"
+          ]
+        ],
+        "planned_tools": [
+          [
+            "search_by_taxon"
+          ]
+        ],
+        "planned_arguments": [
+          [
+            {
+              "taxon": "Panax ginseng",
+              "limit": 10
+            }
+          ]
+        ],
+        "exact": true,
+        "arguments_exact": true,
+        "recognised": [
+          "Panax ginseng"
+        ]
+      },
+      {
+        "id": "H17",
+        "category": "cross_source",
+        "question": "Is quercetin a natural product? Which organisms produce it?",
+        "expected_tools": [
+          [
+            "search_compound"
+          ],
+          [
+            "search_occurrences"
+          ]
+        ],
+        "planned_tools": [
+          [
+            "search_compound"
+          ],
+          [
+            "search_occurrences"
+          ]
+        ],
+        "planned_arguments": [
+          [
+            {
+              "query": "quercetin",
+              "limit": 5
+            }
+          ],
+          [
+            {
+              "limit": 10
+            }
+          ]
+        ],
+        "exact": true,
+        "arguments_exact": true,
+        "recognised": [
+          "quercetin",
+          "produce"
+        ]
+      },
+      {
+        "id": "H18",
+        "category": "cross_source",
+        "question": "Compare what PubChem and ChEMBL have on sildenafil, including bioassay activities.",
+        "expected_tools": [
+          [
+            "search_compound",
+            "search_chembl_molecule"
+          ],
+          [
+            "get_bioactivities"
+          ]
+        ],
+        "planned_tools": [
+          [
+            "search_compound",
+            "search_chembl_molecule"
+          ],
+          [
+            "get_bioactivities"
+          ]
+        ],
+        "planned_arguments": [
+          [
+            {
+              "query": "Compare",
+              "limit": 5
+            },
+            {
+              "query": "Compare",
+              "limit": 5
+            }
+          ],
+          [
+            {
+              "limit": 10
+            }
+          ]
+        ],
+        "exact": true,
+        "arguments_exact": false,
+        "recognised": [
+          "Compare",
+          "sildenafil",
+          "bioassay"
+        ]
+      },
+      {
+        "id": "H19",
+        "category": "cross_source",
+        "question": "Find the protein entry for PTGS2 in human and some literature about celecoxib.",
+        "expected_tools": [
+          [
+            "search_protein",
+            "search_literature"
+          ]
+        ],
+        "planned_tools": [
+          [
+            "search_protein",
+            "search_literature"
+          ]
+        ],
+        "planned_arguments": [
+          [
+            {
+              "query": "gene:PTGS2",
+              "organism_id": 9606,
+              "reviewed_only": true,
+              "limit": 5
+            },
+            {
+              "term": "PTGS2 AND celecoxib",
+              "limit": 5,
+              "sort": "relevance"
+            }
+          ]
+        ],
+        "exact": true,
+        "arguments_exact": false,
+        "recognised": [
+          "PTGS2",
+          "celecoxib"
+        ]
+      },
+      {
+        "id": "H20",
+        "category": "cross_source",
+        "question": "Bioactivity of paracetamol in ChEMBL and its PubChem identifiers",
+        "expected_tools": [
+          [
+            "search_compound",
+            "search_chembl_molecule"
+          ],
+          [
+            "get_bioactivities"
+          ]
+        ],
+        "planned_tools": [
+          [
+            "search_compound",
+            "search_chembl_molecule"
+          ],
+          [
+            "get_bioactivities"
+          ]
+        ],
+        "planned_arguments": [
+          [
+            {
+              "query": "paracetamol",
+              "limit": 5
+            },
+            {
+              "query": "paracetamol",
+              "limit": 5
+            }
+          ],
+          [
+            {
+              "limit": 10
+            }
+          ]
+        ],
+        "exact": true,
+        "arguments_exact": true,
+        "recognised": [
+          "paracetamol"
+        ]
+      }
+    ],
+    "path": "benchmark/heldout_paraphrases.json"
+  }
+}

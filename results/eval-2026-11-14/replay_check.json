@@ -1,0 +1,14 @@
+{
+  "checked_utc": "2026-11-14T23:00:09+00:00",
+  "live_run_started_utc": "2026-11-14T22:47:04+00:00",
+  "replay_runtime_s": 2.0,
+  "http_requests_replayed": {
+    "pass1_cold": 53,
+    "pass2_warm": 2
+  },
+  "metrics_compared": "every metric of every pass and category except latency",
+  "metrics_identical": true,
+  "differing_metrics": [],
+  "answers_compared": 68,
+  "answers_identical": 68
+}

@@ -1,0 +1,27 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Local cache, call log and raw-response archive
+data/
+*.db
+
+# Raw upstream responses of evaluation runs. They are evidence for the numbers
+# in results/, but redistributing them is a licensing decision (ChEMBL data are
+# CC BY-SA 3.0). Remove these two lines to publish them; see docs/notes.md.
+results/*/raw/
+results/*/http_cassette.json.gz
+
+.DS_Store

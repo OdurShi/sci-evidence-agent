@@ -1,0 +1,21 @@
+{
+ "recorded": "2026-11-14",
+ "request": {
+  "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/zzzznotacompound/property/MolecularFormula,SMILES,InChIKey,MolecularWeight,IUPACName/JSON",
+  "params": {}
+ },
+ "status": 404,
+ "headers": {
+  "x-throttling-control": "Request Count status: Green (0%), Request Time status: Green (0%), Service status: Green (30%)",
+  "content-type": "application/json"
+ },
+ "body": {
+  "Fault": {
+   "Code": "PUGREST.NotFound",
+   "Message": "No CID found",
+   "Details": [
+    "No CID found that matches the given name"
+   ]
+  }
+ }
+}

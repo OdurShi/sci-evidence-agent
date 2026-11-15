@@ -1,0 +1,81 @@
+{
+ "recorded": "2026-11-14",
+ "request": {
+  "url": "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json",
+  "params": {
+   "q": "paracetamol",
+   "limit": 5
+  }
+ },
+ "status": 200,
+ "headers": {
+  "content-type": "application/json"
+ },
+ "body": {
+  "molecules": [
+   {
+    "molecule_chembl_id": "CHEMBL5592090",
+    "pref_name": null,
+    "molecule_type": null,
+    "max_phase": null,
+    "molecule_properties": {
+     "full_molformula": "C7H8N2O2",
+     "full_mwt": "152.15"
+    },
+    "molecule_structures": {
+     "canonical_smiles": "NC(=O)Nc1ccc(O)cc1",
+     "standard_inchi_key": "MHVJUTLRTHDAOG-UHFFFAOYSA-N"
+    }
+   },
+   {
+    "molecule_chembl_id": "CHEMBL112",
+    "pref_name": "ACETAMINOPHEN",
+    "molecule_type": "Small molecule",
+    "max_phase": "4.0",
+    "molecule_properties": {
+     "full_molformula": "C8H9NO2",
+     "full_mwt": "151.16"
+    },
+    "molecule_structures": {
+     "canonical_smiles": "CC(=O)Nc1ccc(O)cc1",
+     "standard_inchi_key": "RZVAJINKPMORJF-UHFFFAOYSA-N"
+    }
+   },
+   {
+    "molecule_chembl_id": "CHEMBL3544802",
+    "pref_name": null,
+    "molecule_type": "Small molecule",
+    "max_phase": null,
+    "molecule_properties": {
+     "full_molformula": "C8H9NO5S",
+     "full_mwt": "231.23"
+    },
+    "molecule_structures": {
+     "canonical_smiles": "CC(=O)Nc1ccc(OS(=O)(=O)O)cc1",
+     "standard_inchi_key": "IGTYILLPRJOVFY-UHFFFAOYSA-N"
+    }
+   },
+   {
+    "molecule_chembl_id": "CHEMBL1647",
+    "pref_name": "ACETAMINOPHEN GLUCURONIDE",
+    "molecule_type": "Small molecule",
+    "max_phase": null,
+    "molecule_properties": {
+     "full_molformula": "C14H17NO8",
+     "full_mwt": "327.29"
+    },
+    "molecule_structures": {
+     "canonical_smiles": "CC(=O)Nc1ccc(O[C@@H]2O[C@H](C(=O)O)[C@@H](O)[C@H](O)[C@H]2O)cc1",
+     "standard_inchi_key": "IPROLSVTVHAQLE-BYNIDDHOSA-N"
+    }
+   }
+  ],
+  "page_meta": {
+   "limit": 5,
+   "next": null,
+   "offset": 0,
+   "previous": null,
+   "total_count": 4
+  }
+ }
+}

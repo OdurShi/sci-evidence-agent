@@ -1,0 +1,43 @@
+{
+ "recorded": "2026-11-14",
+ "request": {
+  "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi",
+  "params": {
+   "tool": "sci-evidence-agent",
+   "db": "pubmed",
+   "retmode": "json",
+   "term": "zzzznotarealquery12345",
+   "retmax": 3,
+   "sort": "relevance"
+  }
+ },
+ "status": 200,
+ "headers": {
+  "content-type": "application/json; charset=UTF-8",
+  "x-ratelimit-limit": "3",
+  "x-ratelimit-remaining": "2"
+ },
+ "body": {
+  "header": {
+   "type": "esearch",
+   "version": "0.3"
+  },
+  "esearchresult": {
+   "count": "0",
+   "retmax": "0",
+   "retstart": "0",
+   "idlist": [],
+   "translationset": [],
+   "querytranslation": "zzzznotarealquery12345",
+   "warninglist": {
+    "phrasesignored": [],
+    "quotedphrasesnotfound": [
+     "\"zzzznotarealquery12345\""
+    ],
+    "outputmessages": [
+     "No items found."
+    ]
+   }
+  }
+ }
+}

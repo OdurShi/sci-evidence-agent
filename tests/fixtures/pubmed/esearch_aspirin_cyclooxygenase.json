@@ -1,0 +1,47 @@
+{
+ "recorded": "2026-11-14",
+ "request": {
+  "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi",
+  "params": {
+   "tool": "sci-evidence-agent",
+   "db": "pubmed",
+   "retmode": "json",
+   "term": "aspirin AND cyclooxygenase",
+   "retmax": 3,
+   "sort": "relevance"
+  }
+ },
+ "status": 200,
+ "headers": {
+  "content-type": "application/json; charset=UTF-8",
+  "x-ratelimit-limit": "3",
+  "x-ratelimit-remaining": "2"
+ },
+ "body": {
+  "header": {
+   "type": "esearch",
+   "version": "0.3"
+  },
+  "esearchresult": {
+   "count": "6221",
+   "retmax": "3",
+   "retstart": "0",
+   "idlist": [
+    "14592543",
+    "9263351",
+    "15199473"
+   ],
+   "translationset": [
+    {
+     "from": "aspirin",
+     "to": "\"aspirin\"[Supplementary Concept] OR \"aspirin\"[All Fields] OR \"aspirin\"[MeSH Terms] OR \"aspirins\"[All Fields] OR \"aspirin's\"[All Fields] OR \"aspirine\"[All Fields]"
+    },
+    {
+     "from": "cyclooxygenase",
+     "to": "\"prostaglandin-endoperoxide synthases\"[Supplementary Concept] OR \"prostaglandin-endoperoxide synthases\"[All Fields] OR \"cyclooxygenases\"[All Fields] OR \"prostaglandin-endoperoxide synthases\"[MeSH Terms] OR (\"prostaglandin-endoperoxide\"[All Fields] AND \"synthases\"[All Fields]) OR \"ptgs1 protein, human\"[Supplementary Concept] OR \"ptgs1 protein, human\"[All Fields] OR \"cyclooxygenase\"[All Fields]"
+    }
+   ],
+   "querytranslation": "(\"aspirin\"[Supplementary Concept] OR \"aspirin\"[All Fields] OR \"aspirin\"[MeSH Terms] OR \"aspirins\"[All Fields] OR \"aspirin s\"[All Fields] OR \"aspirine\"[All Fields]) AND (\"prostaglandin endoperoxide synthases\"[Supplementary Concept] OR \"prostaglandin endoperoxide synthases\"[All Fields] OR \"cyclooxygenases\"[All Fields] OR \"prostaglandin endoperoxide synthases\"[MeSH Terms] OR (\"prostaglandin endoperoxide\"[All Fields] AND \"synthases\"[All Fields]) OR \"ptgs1 protein human\"[Supplementary Concept] OR \"ptgs1 protein human\"[All Fields] OR \"cyclooxygenase\"[All Fields])"
+  }
+ }
+}
